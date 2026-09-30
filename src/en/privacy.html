@@ -1,0 +1,147 @@
+title: Privacy Policy
+description: Explains what {{APP_NAME}} keeps on your device, what is sent to servers if you create an account, who can see it, and what your rights are.
+
+<h1>Privacy Policy</h1>
+<p class="meta">Effective date: {{EFFECTIVE_DATE}}</p>
+
+<div class="note" role="note">
+  <p><strong>In short:</strong></p>
+  <ul>
+    <li>If you do not create an account, your counter, metrics and past attempts stay on your device (and, if you wish, in your own iCloud backup). They do not reach us.</li>
+    <li>An account is only for the friends leaderboard and watcher features. If you create one, the data listed below is sent to our servers.</li>
+    <li>No ads, no tracking, no advertising identifier, no third-party analytics. We do not sell your data.</li>
+    <li>You can delete your account yourself in the app (Profile &gt; Account &amp; Subscription).</li>
+  </ul>
+</div>
+
+<nav class="toc" aria-label="Contents">
+  <ol>
+    <li><a href="#controller">Controller and contact</a></li>
+    <li><a href="#device">Data processed only on your device</a></li>
+    <li><a href="#server">Data sent if you create an account</a></li>
+    <li><a href="#sharing">Who can see your data</a></li>
+    <li><a href="#processors">Service providers</a></li>
+    <li><a href="#basis">Purposes and legal basis</a></li>
+    <li><a href="#ads">Ads, tracking and sale</a></li>
+    <li><a href="#notifications">Notifications</a></li>
+    <li><a href="#retention">Retention and deletion</a></li>
+    <li><a href="#icloud">iCloud and backup</a></li>
+    <li><a href="#transfers">International transfers</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#rights">Your rights</a></li>
+    <li><a href="#changes">Changes</a></li>
+  </ol>
+</nav>
+
+<h2 id="controller">1. Controller and contact</h2>
+<p>This policy applies to the iPhone app {{APP_NAME}} and to this website. The controller of your personal data is {{DEVELOPER_NAME}}. For any privacy question or request, write to <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+
+<h2 id="device">2. Data processed only on your device</h2>
+<p>The following data is kept on your device so the app can work, even if you never create an account. No network request is made for the counter, and this data is not sent to us unless you create an account:</p>
+<ul>
+  <li>Your quit date and time, cigarettes smoked per day, cigarettes per pack, time to smoke a cigarette, pack price and price history, and currency.</li>
+  <li>Statistics of past attempts (start and end, duration, money saved, cigarettes not smoked, time saved).</li>
+  <li>Your name (optional) and your notification preferences.</li>
+  <li>Local notifications for recovery stages, milestones and daily motivation. These are created on your device and do not come from a server.</li>
+</ul>
+<p>This data is kept in a file in the app's storage. For iCloud backup, see <a href="#icloud">this section</a>.</p>
+
+<h2 id="server">3. Data sent if you create an account</h2>
+<p>Creating an account is optional and is done with email or Sign in with Apple. When you create an account and use the related features, the following data is sent to our servers (Google Firebase / Google Cloud):</p>
+<div class="table-wrap">
+<table>
+  <caption>Data stored on the server for a user with an account</caption>
+  <thead><tr><th scope="col">Data</th><th scope="col">When</th><th scope="col">Purpose</th></tr></thead>
+  <tbody>
+    <tr><td>Email address and sign-in credentials (with email sign-in the password is processed by Firebase Authentication and we never see it; with Apple sign-in, the identifier Apple provides, and your email may be Apple's private relay address)</td><td>When you create an account</td><td>Signing in, recognizing the account</td></tr>
+    <tr><td>Your name (entered by you; it is not taken from Apple)</td><td>When you save a name</td><td>Showing your name to friends and watchers, using it in notifications</td></tr>
+    <tr><td>Share code (a random 12-character code)</td><td>When the account is created</td><td>Adding friends and watchers</td></tr>
+    <tr><td>Account start time (server time)</td><td>When the account is created</td><td>Points calculation (points count from the moment the account is created)</td></tr>
+    <tr><td>Slip and reset events ("continue" and "reset") with server time</td><td>When you choose in the "I smoked" flow</td><td>Points and streak, notifying your watcher</td></tr>
+    <tr><td>Points summary (points, streak and the parameters used to calculate them) and the start of your current attempt</td><td>With the account</td><td>Friends leaderboard</td></tr>
+    <tr><td>Friendship, watcher, pending request and block records (including share codes and a snapshot of names of the people involved)</td><td>When you send, accept or block</td><td>Providing social features</td></tr>
+    <tr><td>Watcher data: cigarettes per day, cigarettes per pack, time to smoke a cigarette, currency, price records, the start of your current attempt and past attempts</td><td>Only while you have an active watcher</td><td>Letting your watcher see your counter and metrics</td></tr>
+    <tr><td>Push target: Firebase Installation ID (FID) and platform</td><td>If you have an account and allowed notifications</td><td>Delivering friend and watcher notifications to your device</td></tr>
+    <tr><td>Time zone and app language</td><td>When the account is created and when they change</td><td>Applying quiet hours (22:00-09:00) in the recipient's time</td></tr>
+    <tr><td>Subscription status: Premium end time, transaction identifier, environment (live or test) and a random purchase identifier tied to your account</td><td>After a purchase or restore</td><td>Linking and verifying Premium for your account</td></tr>
+    <tr><td>Report records: reporter, reported person, reason (inappropriate name, harassment, fake account, other) and a snapshot of the name</td><td>When you report someone</td><td>Preventing abuse (Apple guideline 1.2)</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Some of this data indirectly shows your effort to quit smoking and may be considered health information. For that reason we process it only when you create an account and use the related feature, and only to provide that feature.</p>
+<p>As with every internet service, when your device connects to our servers your IP address and connection details are technically processed by Google and Apple infrastructure. Apple App Attest and Firebase App Check are used to verify that requests come from a genuine device and app; this is not used to examine your identity or usage habits.</p>
+
+<h2 id="sharing">4. Who can see your data</h2>
+<ul>
+  <li><strong>Your friends:</strong> Friends you both accepted see your name, points, streak and time smoke-free in the leaderboard. They do not see your slip or reset events.</li>
+  <li><strong>Your watchers:</strong> A person is added as a watcher only if you accept their request. A watcher sees your name, counter, metrics, past attempts, points and streak, is notified when you reset or choose to continue after a slip, and receives periodic positive summary notifications without details while the relationship lasts. You can have at most 3 watchers and a watcher can watch at most 3 people. A watcher's access lasts as long as your Premium does and for 2 days after it ends; without Premium, your information is not visible to watchers. You can remove a watcher at any time.</li>
+  <li><strong>Other users:</strong> Someone who knows your share code can send you a friend or watcher request. When the request reaches you, the sender's name is visible to you; your data is not opened to the other side until you accept. You can decline, decline and block, and report the person. A blocked person is not told they were blocked.</li>
+  <li><strong>Us:</strong> As the developer, we may access server data to the extent needed to operate the app and review reports.</li>
+</ul>
+
+<h2 id="processors">5. Service providers (processors)</h2>
+<ul>
+  <li><strong>Google Firebase / Google Cloud:</strong> authentication (Firebase Authentication), database (Cloud Firestore), server functions (Cloud Functions), notification delivery (Firebase Cloud Messaging) and app verification (App Check). Firestore data and functions run in Europe, in the <code>europe-west1</code> (Belgium) region.</li>
+  <li><strong>Apple:</strong> purchases (App Store, StoreKit), Sign in with Apple, push notification service (APNs) and iCloud. Apple processes your payment information; we never see your card or payment details. Apple tells us your subscription status and transaction identifier.</li>
+</ul>
+<p>These providers' own privacy policies also apply. We do not share your data with any other third party.</p>
+
+<h2 id="basis">6. Purposes and legal basis</h2>
+<ul>
+  <li><strong>Account, social features and notifications:</strong> based on your explicit consent, to the extent needed to provide these features. Creating an account, using the feature and accepting a request express that consent. You can withdraw it by deleting your account or removing the feature (for example a watcher).</li>
+  <li><strong>Premium subscription:</strong> performance of the contract with you.</li>
+  <li><strong>Report records, security and abuse prevention:</strong> our legitimate interest and our obligations under app store rules.</li>
+  <li><strong>Legal obligations:</strong> where required.</li>
+</ul>
+<p>We do not use your data for profiling, marketing or advertising beyond what is described above.</p>
+
+<h2 id="ads">7. Ads, tracking and sale</h2>
+<ul>
+  <li>The app has no ads.</li>
+  <li>The advertising identifier (IDFA) is not used and the app does not track you across other apps and websites. For that reason we do not ask for tracking permission.</li>
+  <li>No third-party analytics or usage-measurement SDK is used.</li>
+  <li>We do not sell or rent your personal data.</li>
+  <li>This website uses no cookies and loads no analytics or external trackers.</li>
+</ul>
+
+<h2 id="notifications">8. Notifications</h2>
+<p>Local notifications (recovery stages, milestones, daily motivation) are scheduled on your device and do not come from a server. Notifications from the server (friend and watcher requests, acceptance, removal, watcher updates) are sent only if you have an account and allowed notifications. You do not have to allow notifications; you can turn them off at any time in iOS Settings or under Profile &gt; Notifications in the app. To keep details off your lock screen you can turn on "Hide details in notifications". Watcher notifications carry no details (for example "There is an update from &lt;Name&gt;").</p>
+
+<h2 id="retention">9. Retention and deletion</h2>
+<ul>
+  <li><strong>Data on your device</strong> stays until you delete it or remove the app.</li>
+  <li><strong>Server data</strong> is kept while your account is open.</li>
+  <li><strong>Deleting your account:</strong> In the app go to Profile &gt; Account &amp; Subscription &gt; Delete account. Your account, name, share code, points, slip and reset records, friendships, watcher relationships and watcher data, notification targets and subscription links are permanently deleted from the server; this cannot be undone. If you created your account with Sign in with Apple, the connection with Apple is revoked when you delete it. Your watchers and the people you watch are informed.</li>
+  <li><strong>What is not deleted:</strong> (a) Report records may be kept to prevent abuse. (b) Local tracking data on your device (counter, metrics, past attempts) is not removed by deleting your account; you can delete it in the app or by uninstalling the app. (c) Deleting your account does not cancel your Apple subscription; cancel it separately in App Store settings. (d) Copies in iCloud are in your own iCloud account and are subject to Apple's processes.</li>
+  <li><strong>Technical logs:</strong> Our infrastructure providers may keep standard server logs to operate the service.</li>
+</ul>
+<p>If you cannot access the app, you can send a deletion request to <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+
+<h2 id="icloud">10. iCloud and backup</h2>
+<p>So that your tracking data is not lost when you move to a new phone, even without an account, the data file on your device is included in your iCloud device backup automatically (if iCloud Backup is on). A small copy is also kept in iCloud key-value storage. This copy is encrypted on the device; the encryption key is kept in iCloud Keychain and is not available to us or to third parties. Apple operates iCloud and we have no access to that data. If you turn iCloud off, this backup is not made and your data may not return on a new phone.</p>
+
+<h2 id="transfers">11. International transfers</h2>
+<p>Firestore data and server functions run in Europe (<code>europe-west1</code>, Belgium). Some Google services such as authentication, notification delivery and app verification, and Apple services, run on global infrastructure, so your data may be processed in countries outside the European Economic Area and Türkiye. Such transfers are made with the appropriate safeguards offered by the providers (for example standard contractual clauses) and in line with applicable law.</p>
+
+<h2 id="security">12. Security</h2>
+<p>Data is encrypted in transit. The server database is protected by access rules: a user can reach only their own data and the data of people who were allowed to see it, and the client cannot write fields such as points or Premium status. App and server calls are verified with App Check. No system is completely secure; if a breach occurs we will make the notifications required by law.</p>
+
+<h2 id="children">13. Children</h2>
+<p>{{APP_NAME}} is not directed to anyone under 18. If we learn that someone under 18 has created an account, we delete the account and its data. If you think your child has created an account, write to <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+
+<h2 id="rights">14. Your rights</h2>
+<p>Under Turkish Personal Data Protection Law No. 6698 (KVKK), article 11, and the EU General Data Protection Regulation (GDPR), you have the right to:</p>
+<ul>
+  <li>Learn whether your data is processed, request information, and obtain a copy of your data (access, portability).</li>
+  <li>Have incorrect or incomplete data corrected (you can correct your name and profile in the app).</li>
+  <li>Have your data erased or destroyed (you can delete your account in the app).</li>
+  <li>Restrict or object to processing, and withdraw your consent at any time.</li>
+  <li>Learn which third parties your data was transferred to and ask that they be told about corrections or deletions.</li>
+  <li>Object to a result against you produced solely by automated processing, and claim compensation for damage caused by unlawful processing (KVKK).</li>
+  <li>Complain to a supervisory authority: in Türkiye the Personal Data Protection Board; in the EU, the data protection authority in your country.</li>
+</ul>
+<p>Send your request to <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>. To verify your identity we may ask you to write from the email address of your account or to include your share code. We respond to requests within 30 days at the latest.</p>
+
+<h2 id="changes">15. Changes</h2>
+<p>We may update this policy as the app or the law changes. We will announce important changes in the app or on this page; the effective date of the current version is at the top of the page. This version took effect on {{EFFECTIVE_DATE}}.</p>

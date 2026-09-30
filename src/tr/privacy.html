@@ -1,0 +1,147 @@
+title: Gizlilik Politikası
+description: {{APP_NAME}} uygulamasının hangi verileri cihazda tuttuğunu, hesap açarsan hangilerini sunucuya gönderdiğini, kimlerle paylaştığını ve haklarını anlatır.
+
+<h1>Gizlilik Politikası</h1>
+<p class="meta">Yürürlük tarihi: {{EFFECTIVE_DATE}}</p>
+
+<div class="note" role="note">
+  <p><strong>Kısaca:</strong></p>
+  <ul>
+    <li>Hesap açmazsan sayaç, metrikler ve geçmiş denemelerin yalnızca cihazında (ve istersen kendi iCloud yedeğinde) kalır; bize ulaşmaz.</li>
+    <li>Hesap yalnızca arkadaş sıralaması ve gözetmen özellikleri içindir. Hesap açarsan aşağıda sayılan veriler sunucuya gider.</li>
+    <li>Reklam yok, izleme yok, reklam kimliği yok, üçüncü taraf analitik yok. Verilerini satmayız.</li>
+    <li>Hesabını uygulamadan (Profil &gt; Hesap ve Abonelik) kendin silebilirsin.</li>
+  </ul>
+</div>
+
+<nav class="toc" aria-label="İçindekiler">
+  <ol>
+    <li><a href="#sorumlu">Veri sorumlusu ve iletişim</a></li>
+    <li><a href="#cihaz">Yalnızca cihazında işlenen veriler</a></li>
+    <li><a href="#sunucu">Hesap açarsan sunucuya giden veriler</a></li>
+    <li><a href="#paylasim">Verilerini kimler görür?</a></li>
+    <li><a href="#saglayici">Hizmet sağlayıcılar</a></li>
+    <li><a href="#dayanak">İşleme amacı ve hukuki dayanak</a></li>
+    <li><a href="#reklam">Reklam, izleme ve satış</a></li>
+    <li><a href="#bildirim">Bildirimler</a></li>
+    <li><a href="#saklama">Saklama ve silme</a></li>
+    <li><a href="#icloud">iCloud ve yedekleme</a></li>
+    <li><a href="#aktarim">Yurt dışına aktarım</a></li>
+    <li><a href="#guvenlik">Güvenlik</a></li>
+    <li><a href="#cocuk">Çocuklar</a></li>
+    <li><a href="#haklar">Haklarını nasıl kullanırsın?</a></li>
+    <li><a href="#degisiklik">Değişiklikler</a></li>
+  </ol>
+</nav>
+
+<h2 id="sorumlu">1. Veri sorumlusu ve iletişim</h2>
+<p>Bu politika, iPhone için {{APP_NAME}} uygulaması ve bu web sitesi için geçerlidir. Kişisel verilerin işlenmesinde veri sorumlusu {{DEVELOPER_NAME}}'dır. Gizlilikle ilgili her soru ve talep için: <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+
+<h2 id="cihaz">2. Yalnızca cihazında işlenen veriler</h2>
+<p>Aşağıdaki veriler hesap açmasan da uygulamanın çalışması için cihazında tutulur. Sayaç için ağ isteği yapılmaz ve bu veriler, hesap açmadıkça bize gönderilmez:</p>
+<ul>
+  <li>Bırakma tarihi ve saati, günlük içilen sigara sayısı, paketteki sigara sayısı, bir sigara içme süresi, paket fiyatı ve fiyat geçmişi, para birimi.</li>
+  <li>Geçmiş denemelerin istatistikleri (başlangıç ve bitiş, süre, cepte kalan para, içilmeyen sigara, kurtarılan zaman).</li>
+  <li>Girdiğin ad (isteğe bağlı) ve bildirim tercihlerin.</li>
+  <li>İyileşme aşamaları, kilometre taşları ve günlük motivasyon için planlanan yerel bildirimler. Bunlar cihazında oluşturulur; sunucudan gelmez.</li>
+</ul>
+<p>Bu veriler uygulamanın depolama alanında bir dosyada tutulur. iCloud yedeklemesi ile ilgili bilgi için <a href="#icloud">bu bölüme</a> bak.</p>
+
+<h2 id="sunucu">3. Hesap açarsan sunucuya giden veriler</h2>
+<p>Hesap açmak isteğe bağlıdır ve e-posta ya da Sign in with Apple ile yapılır. Hesap açtığında ve ilgili özellikleri kullandığında şu veriler sunucularımıza (Google Firebase / Google Cloud) gider:</p>
+<div class="table-wrap">
+<table>
+  <caption>Hesaplı kullanıcı için sunucuda tutulan veriler</caption>
+  <thead><tr><th scope="col">Veri</th><th scope="col">Ne zaman</th><th scope="col">Ne için</th></tr></thead>
+  <tbody>
+    <tr><td>E-posta adresi ve kimlik doğrulama bilgisi (e-posta ile girişte parola Firebase Authentication tarafından işlenir; biz parolayı görmeyiz. Apple ile girişte Apple'ın verdiği kimlik bilgisi, e-posta adresin gizli aktarım adresi de olabilir)</td><td>Hesap açarken</td><td>Giriş yapmak, hesabı tanımak</td></tr>
+    <tr><td>Adın (sen girersin; Apple'dan alınmaz)</td><td>Adı kaydettiğinde</td><td>Arkadaşlara ve gözetmenlere ad göstermek, bildirimlerde kullanmak</td></tr>
+    <tr><td>Paylaşım kodu (12 karakterlik rastgele kod)</td><td>Hesap açılınca</td><td>Arkadaş eklemek, gözetmen eklemek</td></tr>
+    <tr><td>Hesap başlangıç zamanı (sunucu saatiyle)</td><td>Hesap açılınca</td><td>Puan hesabı (puan hesap açma anından itibaren sayılır)</td></tr>
+    <tr><td>Kayma ve sıfırlama olayları ("devam et" ve "sıfırla") ve sunucu zamanı</td><td>"Sigara içtim" akışında seçim yapınca</td><td>Puan ve seri hesabı, gözetmene bildirim</td></tr>
+    <tr><td>Puan özeti (puan, seri ve hesaplamada kullanılan parametreler) ve süren denemenin başlangıcı</td><td>Hesapla birlikte</td><td>Arkadaş sıralaması</td></tr>
+    <tr><td>Arkadaşlık, gözetmen, bekleyen istek ve engel kayıtları (ilgili kişilerin paylaşım kodu ile ad bilgisinin o anki görüntüsü dahil)</td><td>İstek gönderdiğinde, kabul ettiğinde ya da engellediğinde</td><td>Sosyal özellikleri sağlamak</td></tr>
+    <tr><td>Gözetmen verisi: günlük sigara sayısı, paketteki sigara sayısı, bir sigara içme süresi, para birimi, fiyat kayıtları, süren denemenin başlangıcı ve geçmiş denemeler</td><td>Yalnızca aktif bir gözetmenin varken</td><td>Gözetmenin senin sayacını ve metriklerini görebilmesi</td></tr>
+    <tr><td>Bildirim hedefi: Firebase Installation ID (FID) ve platform</td><td>Hesaplıysan ve bildirim izni verdiysen</td><td>Arkadaş ve gözetmen bildirimlerini cihazına göndermek</td></tr>
+    <tr><td>Saat dilimi ve uygulama dili</td><td>Hesap açılınca ve değiştikçe</td><td>Sessiz saatleri (22:00-09:00) alıcının saatine göre uygulamak</td></tr>
+    <tr><td>Abonelik durumu: Premium bitiş zamanı, işlem kimliği, ortam (canlı ya da test), hesaba bağlı rastgele bir satın alma kimliği</td><td>Satın alma ya da geri yükleme sonrası</td><td>Premium'u hesaba bağlamak ve doğrulamak</td></tr>
+    <tr><td>Şikayet kayıtları: şikayet eden, şikayet edilen, sebep (uygunsuz ad, taciz, sahte hesap, diğer) ve ad bilgisinin görüntüsü</td><td>Birini şikayet ettiğinde</td><td>Kötüye kullanımı önlemek (Apple kuralı 1.2)</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Bu verilerin bir kısmı dolaylı olarak sigarayı bırakma çabanı gösterir ve sağlık bilgisi sayılabilir. Bu nedenle bu verileri yalnızca sen hesap açıp ilgili özelliği kullandığında ve yalnızca o özelliği sağlamak için işleriz.</p>
+<p>Uygulama sunucularına ulaşırken, bütün internet hizmetlerinde olduğu gibi, IP adresin ve cihazın bağlantı bilgileri Google ve Apple altyapısı tarafından teknik olarak işlenir. Cihazın ve uygulamanın gerçek olduğunu doğrulamak için Apple App Attest ve Firebase App Check kullanılır; bu doğrulama kimliğini ya da kullanım alışkanlıklarını incelemek için değildir.</p>
+
+<h2 id="paylasim">4. Verilerini kimler görür?</h2>
+<ul>
+  <li><strong>Arkadaşların:</strong> Karşılıklı kabul ettiğin arkadaşlar adını, puanını, serini ve sigarasız süreni sıralamada görür. Kayma ya da sıfırlama olaylarını görmezler.</li>
+  <li><strong>Gözetmenlerin:</strong> Bir kişiyi gözetmen olarak ancak sen isteği kabul edersen eklenir. Gözetmen adını, sayacını, metriklerini, geçmiş denemelerini, puanını ve serini görür; sayacı sıfırladığında ya da "devam et" dediğinde bildirim alır, ayrıca ilişki sürdüğü sürece periyodik, ayrıntı içermeyen olumlu özet bildirimleri alır. En fazla 3 gözetmenin ve bir gözetmen en fazla 3 kişiyi izleyebilir. Gözetmenin erişimi Premium'un sürdüğü süre ve bitişinden sonra 2 gün boyunca devam eder; Premium olmadığında bilgiler gözetmene görünmez. İstediğin zaman bir gözetmeni kaldırabilirsin.</li>
+  <li><strong>Diğer kullanıcılar:</strong> Paylaşım kodunu bilen biri sana arkadaşlık ya da gözetmenlik isteği gönderebilir. İstek sana ulaştığında gönderenin adı görünür; sen kabul edene kadar sana ait veriler karşı tarafa açılmaz. İsteği reddedebilir, reddedip kişiyi engelleyebilir ve şikayet edebilirsin. Engellenen kişi, engellendiğini öğrenmez.</li>
+  <li><strong>Biz:</strong> Geliştirici olarak, uygulamayı işletmek ve şikayetleri incelemek için gerekli olduğu ölçüde sunucudaki verilere erişebiliriz.</li>
+</ul>
+
+<h2 id="saglayici">5. Hizmet sağlayıcılar (veri işleyenler)</h2>
+<ul>
+  <li><strong>Google Firebase / Google Cloud:</strong> Kimlik doğrulama (Firebase Authentication), veri tabanı (Cloud Firestore), sunucu fonksiyonları (Cloud Functions), bildirim gönderimi (Firebase Cloud Messaging) ve uygulama doğrulaması (App Check). Firestore verileri ve fonksiyonlar Avrupa'da, <code>europe-west1</code> (Belçika) bölgesinde çalışır.</li>
+  <li><strong>Apple:</strong> Satın almalar (App Store, StoreKit), Sign in with Apple, anlık bildirim altyapısı (APNs) ve iCloud. Ödeme bilgilerini Apple işler; biz kredi kartı ya da ödeme bilgini görmeyiz. Apple bize abonelik durumunu ve işlem kimliğini bildirir.</li>
+</ul>
+<p>Bu sağlayıcıların kendi gizlilik politikaları da geçerlidir. Başka bir üçüncü tarafla verini paylaşmayız.</p>
+
+<h2 id="dayanak">6. İşleme amacı ve hukuki dayanak</h2>
+<ul>
+  <li><strong>Hesap, sosyal özellikler ve bildirimler:</strong> Bu özellikleri sunmak için gerekli olduğu ölçüde, senin açık rızana dayanır. Hesabı açıp özelliği kullanman ve istek kabul etmen bu rızanın ifadesidir. Rızanı, hesabını silerek ya da ilgili özelliği (örneğin gözetmeni) kaldırarak geri alabilirsin.</li>
+  <li><strong>Premium aboneliği:</strong> Seninle yapılan sözleşmenin ifası.</li>
+  <li><strong>Şikayet kayıtları, güvenlik ve kötüye kullanımı önleme:</strong> Meşru menfaatimiz ve uygulama mağazası kurallarından doğan yükümlülüğümüz.</li>
+  <li><strong>Yasal yükümlülükler:</strong> Zorunlu olduğunda.</li>
+</ul>
+<p>Verilerini, yukarıda anlatılanların dışında profil çıkarmak, pazarlama ya da reklam amacıyla kullanmayız.</p>
+
+<h2 id="reklam">7. Reklam, izleme ve satış</h2>
+<ul>
+  <li>Uygulamada reklam yoktur.</li>
+  <li>Reklam kimliği (IDFA) kullanılmaz; uygulama seni diğer uygulamalar ve sitelerde izlemez. Bu nedenle izleme izni istemeyiz.</li>
+  <li>Üçüncü taraf analitik ya da kullanım ölçümü SDK'sı kullanılmaz.</li>
+  <li>Kişisel verilerini satmayız ve kiralamayız.</li>
+  <li>Bu web sitesi çerez kullanmaz, analitik ya da harici izleyici yüklemez.</li>
+</ul>
+
+<h2 id="bildirim">8. Bildirimler</h2>
+<p>Yerel bildirimler (iyileşme aşamaları, kilometre taşları, günlük motivasyon) cihazında planlanır; sunucudan gelmez. Sunucudan gelen bildirimler (arkadaş ve gözetmen istekleri, kabul, kaldırma, gözetmen güncellemeleri) yalnızca hesaplıysan ve bildirim izni verdiysen gönderilir. Bildirim izni vermek zorunda değilsin; iOS Ayarları'ndan ya da uygulamadaki Profil &gt; Bildirimler'den istediğin zaman kapatabilirsin. Bildirimin kilit ekranında ayrıntı göstermemesi için uygulamada "Bildirimde ayrıntıyı gizle" ayarını açabilirsin. Gözetmen bildirimleri ayrıntı vermez ("&lt;Ad&gt;'dan bir güncelleme var" gibi).</p>
+
+<h2 id="saklama">9. Saklama ve silme</h2>
+<ul>
+  <li><strong>Cihazındaki veriler</strong> sen silene kadar ya da uygulamayı kaldırana kadar cihazında kalır.</li>
+  <li><strong>Sunucudaki veriler</strong> hesabın açık olduğu sürece saklanır.</li>
+  <li><strong>Hesabı silme:</strong> Uygulamada Profil &gt; Hesap ve Abonelik &gt; Hesabı sil yolunu izleyebilirsin. Hesabın, adın, paylaşım kodun, puanın, kayma ve sıfırlama kayıtların, arkadaşlıkların, gözetmen ilişkilerin ve gözetmen verin, bildirim hedeflerin ve abonelik bağlamaların sunucudan kalıcı olarak silinir; bu geri alınamaz. Sign in with Apple ile açtığın hesabı sildiğinde Apple ile olan oturum bağlantısı da kaldırılır. Silme sırasında gözetmenlerin ve izlediğin kişiler bilgilendirilir.</li>
+  <li><strong>Silinmeyenler:</strong> (a) Şikayet kayıtları, kötüye kullanımı önlemek için saklanabilir. (b) Cihazındaki yerel takip verisi (sayaç, metrikler, geçmiş denemeler) hesabı silmekle silinmez; bunları uygulamadan ya da uygulamayı kaldırarak silebilirsin. (c) Hesabı silmek Apple'daki aboneliğini iptal etmez; aboneliği App Store ayarlarından ayrıca iptal etmelisin. (d) iCloud'daki yedek kopyalar kendi iCloud hesabındadır ve Apple'ın süreçlerine tabidir.</li>
+  <li><strong>Teknik kayıtlar:</strong> Altyapı sağlayıcıları, hizmetin işletilmesi için standart sunucu günlükleri tutabilir.</li>
+</ul>
+<p>Uygulamaya erişemiyorsan silme talebini <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a> adresine yazabilirsin.</p>
+
+<h2 id="icloud">10. iCloud ve yedekleme</h2>
+<p>Hesap açmasan da takip verilerin yeni bir telefona geçerken kaybolmasın diye, cihazındaki veri dosyası iCloud cihaz yedeğine kendiliğinden girer (iCloud yedeklemen açıksa). Ayrıca küçük bir kopya, iCloud anahtar-değer deposunda tutulur. Bu kopya cihazda şifrelenir; şifre anahtarı iCloud Anahtar Zinciri'nde saklanır ve bize ya da üçüncü taraflara açık değildir. iCloud'u Apple işler, verilere erişimimiz yoktur. iCloud'u kapatırsan bu yedekleme yapılmaz; bu durumda yeni telefonda veriler geri gelmeyebilir.</p>
+
+<h2 id="aktarim">11. Yurt dışına aktarım</h2>
+<p>Firestore verileri ve sunucu fonksiyonları Avrupa'da (<code>europe-west1</code>, Belçika) çalışır. Kimlik doğrulama, bildirim gönderimi ve uygulama doğrulaması gibi bazı Google hizmetleri ile Apple hizmetleri küresel altyapıda çalıştığından verilerin Avrupa Ekonomik Alanı ve Türkiye dışındaki ülkelerde işlenmesi mümkündür. Bu aktarımlar, sağlayıcıların sunduğu uygun güvencelere (ör. standart sözleşme hükümleri) ve ilgili mevzuata uygun yapılır.</p>
+
+<h2 id="guvenlik">12. Güvenlik</h2>
+<p>Veriler iletilirken şifrelenir. Sunucu veri tabanı, erişim kurallarıyla korunur: bir kullanıcı yalnızca kendi verisine ve ona izin verilen kişilerin verisine erişebilir; puan ve Premium bilgisi gibi alanlara istemci yazamaz. Uygulama ve sunucu çağrıları App Check ile doğrulanır. Hiçbir sistem tamamen güvenli değildir; bir ihlal olursa mevzuatın gerektirdiği bildirimleri yaparız.</p>
+
+<h2 id="cocuk">13. Çocuklar</h2>
+<p>{{APP_NAME}} 18 yaşından küçüklere yönelik değildir. 18 yaşından küçük birinin hesap açtığını fark edersek hesabı ve verilerini sileriz. Çocuğunuzun hesap açtığını düşünüyorsanız <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a> adresine yazın.</p>
+
+<h2 id="haklar">14. Haklarını nasıl kullanırsın?</h2>
+<p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) madde 11 ve Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) kapsamında şu haklara sahipsin:</p>
+<ul>
+  <li>Verilerinin işlenip işlenmediğini öğrenme ve işlenmişse bilgi isteme; verilerinin bir kopyasını alma (erişim, taşınabilirlik).</li>
+  <li>Yanlış ya da eksik verilerin düzeltilmesini isteme (adını ve profilini uygulamadan kendin düzeltebilirsin).</li>
+  <li>Verilerinin silinmesini ya da yok edilmesini isteme (uygulamadan hesabını silebilirsin).</li>
+  <li>İşlemeyi kısıtlama, işlemeye itiraz etme ve açık rızanı dilediğin zaman geri alma.</li>
+  <li>Verilerin aktarıldığı üçüncü kişileri öğrenme ve düzeltme ya da silme işleminin onlara bildirilmesini isteme.</li>
+  <li>Otomatik işlemeyle aleyhine bir sonuç çıkmasına itiraz etme; kanuna aykırı işleme nedeniyle zarar görürsen tazminat isteme (KVKK).</li>
+  <li>Şikayet hakkı: Türkiye'de Kişisel Verileri Koruma Kurulu'na; AB'de bulunduğun ülkedeki veri koruma otoritesine başvurabilirsin.</li>
+</ul>
+<p>Talebini <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a> adresine yaz. Talebin kimliğini doğrulamak için hesabındaki e-posta adresinden göndermeni ya da paylaşım kodunu yazmanı isteyebiliriz. Talepleri en geç 30 gün içinde yanıtlarız.</p>
+
+<h2 id="degisiklik">15. Değişiklikler</h2>
+<p>Bu politikayı uygulama ya da mevzuat değiştikçe güncelleyebiliriz. Önemli değişiklikleri uygulamada ya da bu sayfada duyururuz; güncel sürümün yürürlük tarihi sayfanın başında yazar. Bu sürüm {{EFFECTIVE_DATE}} tarihinde yürürlüğe girmiştir.</p>
