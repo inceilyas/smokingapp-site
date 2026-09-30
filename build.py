@@ -120,6 +120,7 @@ def main():
                 "FOOTER_NOTE": ui["footer_note"],
                 "FOOTER_RIGHTS": ui["footer_rights"],
                 "EFFECTIVE_DATE": cfg["EFFECTIVE_DATE_TR" if lang == "tr" else "EFFECTIVE_DATE_EN"],
+                "APP_NAME": cfg["APP_NAME"] if lang == "tr" else cfg.get("APP_NAME_EN", cfg["APP_NAME"]),
                 "HOME": "index.html",
             })
             # Once govde parcasi, sonra yerlesim: parcadaki belirtecler de dolsun.
