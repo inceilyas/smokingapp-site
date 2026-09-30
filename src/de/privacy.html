@@ -1,0 +1,147 @@
+title: Datenschutzerklärung
+description: Erklärt, was {{APP_NAME}} auf deinem Gerät speichert, was an Server gesendet wird, wenn du ein Konto erstellst, wer es sehen kann und welche Rechte du hast.
+
+<h1>Datenschutzerklärung</h1>
+<p class="meta">Gültig ab: {{EFFECTIVE_DATE}}</p>
+
+<div class="note" role="note">
+  <p><strong>Kurz gesagt:</strong></p>
+  <ul>
+    <li>Wenn du kein Konto erstellst, bleiben dein Zähler, deine Kennzahlen und deine früheren Versuche auf deinem Gerät (und in der iCloud-Sicherung deines iPhones). Sie gelangen nicht zu uns.</li>
+    <li>Ein Konto dient nur der Freunde-Rangliste und der Begleiter-Funktion. Wenn du eines erstellst, werden die unten aufgeführten Daten an unsere Server gesendet.</li>
+    <li>Keine Werbung, kein Tracking, keine Werbe-ID, keine Analysedienste von Drittanbietern. Wir verkaufen deine Daten nicht.</li>
+    <li>Du kannst dein Konto selbst in der App löschen (Profil &gt; Konto &amp; Abo).</li>
+  </ul>
+</div>
+
+<nav class="toc" aria-label="Inhalt">
+  <ol>
+    <li><a href="#controller">Verantwortlicher und Kontakt</a></li>
+    <li><a href="#device">Nur auf deinem Gerät verarbeitete Daten</a></li>
+    <li><a href="#server">Daten, die bei einem Konto gesendet werden</a></li>
+    <li><a href="#sharing">Wer deine Daten sehen kann</a></li>
+    <li><a href="#processors">Dienstleister</a></li>
+    <li><a href="#basis">Zwecke und Rechtsgrundlage</a></li>
+    <li><a href="#ads">Werbung, Tracking und Verkauf</a></li>
+    <li><a href="#notifications">Benachrichtigungen</a></li>
+    <li><a href="#retention">Speicherung und Löschung</a></li>
+    <li><a href="#icloud">iCloud und Sicherung</a></li>
+    <li><a href="#transfers">Internationale Übermittlungen</a></li>
+    <li><a href="#security">Sicherheit</a></li>
+    <li><a href="#children">Kinder</a></li>
+    <li><a href="#rights">Deine Rechte</a></li>
+    <li><a href="#changes">Änderungen</a></li>
+  </ol>
+</nav>
+
+<h2 id="controller">1. Verantwortlicher und Kontakt</h2>
+<p>Diese Erklärung gilt für die iPhone-App {{APP_NAME}} und für diese Website. Verantwortlicher für deine personenbezogenen Daten ist {{DEVELOPER_NAME}}. Bei Fragen oder Anliegen zum Datenschutz schreib an <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+
+<h2 id="device">2. Nur auf deinem Gerät verarbeitete Daten</h2>
+<p>Die folgenden Daten werden auf deinem Gerät gespeichert, damit die App funktioniert, auch wenn du nie ein Konto erstellst. Für den Zähler wird keine Netzwerkanfrage gestellt, und diese Daten werden nicht an uns gesendet, solange du kein Konto erstellst:</p>
+<ul>
+  <li>Datum und Uhrzeit deines Rauchstopps, täglich gerauchte Zigaretten, Zigaretten pro Schachtel, Zeit für das Rauchen einer Zigarette, Preis pro Schachtel samt Preisverlauf und Währung.</li>
+  <li>Statistiken früherer Versuche (Beginn und Ende, Dauer, gespartes Geld, nicht gerauchte Zigaretten, gesparte Zeit).</li>
+  <li>Dein Name (optional) und deine Benachrichtigungseinstellungen.</li>
+  <li>Lokale Benachrichtigungen zu Erholungsphasen, Meilensteinen und täglicher Motivation. Sie werden auf deinem Gerät erzeugt und kommen nicht von einem Server.</li>
+</ul>
+<p>Diese Daten werden in einer Datei im Speicher der App aufbewahrt. Zur iCloud-Sicherung siehe <a href="#icloud">diesen Abschnitt</a>.</p>
+
+<h2 id="server">3. Daten, die bei einem Konto gesendet werden</h2>
+<p>Die Erstellung eines Kontos ist optional und erfolgt per E-Mail oder mit Apple. Wenn du ein Konto erstellst und die zugehörigen Funktionen nutzt, werden die folgenden Daten an unsere Server gesendet (Google Firebase / Google Cloud):</p>
+<div class="table-wrap">
+<table>
+  <caption>Auf dem Server gespeicherte Daten eines Nutzers mit Konto</caption>
+  <thead><tr><th scope="col">Daten</th><th scope="col">Wann</th><th scope="col">Zweck</th></tr></thead>
+  <tbody>
+    <tr><td>E-Mail-Adresse und Anmeldedaten (bei der Anmeldung per E-Mail wird das Passwort von Firebase Authentication verarbeitet und wir sehen es nie; bei der Anmeldung mit Apple die von Apple bereitgestellte Kennung, und deine E-Mail-Adresse kann die private Relay-Adresse von Apple sein)</td><td>Wenn du ein Konto erstellst</td><td>Anmeldung, Erkennung des Kontos</td></tr>
+    <tr><td>Dein Name (von dir eingegeben; er wird nicht von Apple übernommen)</td><td>Wenn du einen Namen speicherst</td><td>Anzeige deines Namens für Freunde und Begleiter, Verwendung in Benachrichtigungen</td></tr>
+    <tr><td>Share-Code (ein zufälliger Code mit 12 Zeichen)</td><td>Bei der Erstellung des Kontos</td><td>Hinzufügen von Freunden und Begleitern</td></tr>
+    <tr><td>Startzeit des Kontos (Serverzeit)</td><td>Bei der Erstellung des Kontos</td><td>Punkteberechnung (Punkte zählen ab dem Moment der Kontoerstellung)</td></tr>
+    <tr><td>Ausrutscher- und Zurücksetzungs-Ereignisse („Fortfahren“ und „Zurücksetzen“) mit Serverzeit</td><td>Wenn du im Ablauf „Ich habe geraucht“ eine Wahl triffst</td><td>Punkte und Serie, Benachrichtigung deines Begleiters</td></tr>
+    <tr><td>Punkteübersicht (Punkte, Serie und die zur Berechnung verwendeten Parameter) und der Beginn deines aktuellen Versuchs</td><td>Mit dem Konto</td><td>Freunde-Rangliste</td></tr>
+    <tr><td>Einträge zu Freundschaften, Begleitern, offenen Anfragen und Blockierungen (einschließlich Share-Codes und einer Momentaufnahme der Namen der beteiligten Personen)</td><td>Wenn du sendest, annimmst oder blockierst</td><td>Bereitstellung der sozialen Funktionen</td></tr>
+    <tr><td>Begleiter-Daten: Zigaretten pro Tag, Zigaretten pro Schachtel, Zeit für das Rauchen einer Zigarette, Währung, Preiseinträge, der Beginn deines aktuellen Versuchs und frühere Versuche</td><td>Nur solange du einen aktiven Begleiter hast</td><td>Damit dein Begleiter deinen Zähler und deine Kennzahlen sehen kann</td></tr>
+    <tr><td>Push-Ziel: Firebase Installation ID (FID) und Plattform</td><td>Wenn du ein Konto hast und Benachrichtigungen erlaubt hast</td><td>Zustellung von Freunde- und Begleiter-Benachrichtigungen an dein Gerät</td></tr>
+    <tr><td>Zeitzone und App-Sprache</td><td>Bei der Erstellung des Kontos und wenn sie sich ändern</td><td>Anwendung der Ruhezeiten (22:00-09:00) nach der Zeit des Empfängers</td></tr>
+    <tr><td>Abo-Status: Ende von Premium, Transaktionskennung, Umgebung (Live oder Test) und eine zufällige Kaufkennung, die mit deinem Konto verknüpft ist</td><td>Nach einem Kauf oder einer Wiederherstellung</td><td>Verknüpfung und Überprüfung von Premium für dein Konto</td></tr>
+    <tr><td>Meldungs-Einträge: meldende Person, gemeldete Person, Grund (unangemessener Name, Belästigung, gefälschtes Konto, Sonstiges) und eine Momentaufnahme des Namens</td><td>Wenn du jemanden meldest</td><td>Missbrauchsprävention (Apple-Richtlinie 1.2)</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Einige dieser Daten zeigen indirekt dein Bemühen, mit dem Rauchen aufzuhören, und können als Gesundheitsdaten gelten. Deshalb verarbeiten wir sie nur, wenn du ein Konto erstellst und die zugehörige Funktion nutzt, und nur, um diese Funktion bereitzustellen.</p>
+<p>Wie bei jedem Internetdienst werden, wenn sich dein Gerät mit unseren Servern verbindet, deine IP-Adresse und Verbindungsdetails technisch von der Infrastruktur von Google und Apple verarbeitet. Apple App Attest und Firebase App Check werden verwendet, um zu prüfen, dass Anfragen von einem echten Gerät und einer echten App stammen; dies wird nicht dazu genutzt, deine Identität oder deine Nutzungsgewohnheiten zu untersuchen.</p>
+
+<h2 id="sharing">4. Wer deine Daten sehen kann</h2>
+<ul>
+  <li><strong>Deine Freunde:</strong> Freunde, die ihr beide angenommen habt, sehen in der Rangliste deinen Namen, deine Punkte, deine Serie und deine rauchfreie Zeit. Deine Ausrutscher- und Zurücksetzungs-Ereignisse sehen sie nicht.</li>
+  <li><strong>Deine Begleiter:</strong> Eine Person wird nur dann als Begleiter hinzugefügt, wenn du ihre Anfrage annimmst. Ein Begleiter sieht deinen Namen, deinen Zähler, deine Kennzahlen, frühere Versuche, Punkte und Serie, wird benachrichtigt, wenn du nach einem Ausrutscher zurücksetzt oder weitermachst, und erhält, solange die Verbindung besteht, regelmäßig positive Zusammenfassungs-Benachrichtigungen ohne Details. Du kannst höchstens 3 Begleiter haben, und ein Begleiter kann höchstens 3 Personen begleiten. Der Zugang eines Begleiters besteht so lange wie dein Premium und noch 2 Tage nach dessen Ende; ohne Premium sind deine Angaben für Begleiter nicht sichtbar. Du kannst einen Begleiter jederzeit entfernen.</li>
+  <li><strong>Andere Nutzer:</strong> Wer deinen Share-Code kennt, kann dir eine Freundschafts- oder Begleiter-Anfrage senden. Wenn die Anfrage bei dir ankommt, ist dir der Name des Absenders sichtbar; deine Daten werden der Gegenseite erst geöffnet, wenn du annimmst. Du kannst ablehnen, ablehnen und blockieren und die Person melden. Eine blockierte Person wird nicht darüber informiert, dass sie blockiert wurde.</li>
+  <li><strong>Wir:</strong> Als Entwickler können wir auf Serverdaten zugreifen, soweit dies für den Betrieb der App und die Prüfung von Meldungen nötig ist.</li>
+</ul>
+
+<h2 id="processors">5. Dienstleister (Auftragsverarbeiter)</h2>
+<ul>
+  <li><strong>Google Firebase / Google Cloud:</strong> Authentifizierung (Firebase Authentication), Datenbank (Cloud Firestore), Serverfunktionen (Cloud Functions), Zustellung von Benachrichtigungen (Firebase Cloud Messaging) und App-Verifizierung (App Check). Firestore-Daten und Funktionen laufen in Europa, in der Region <code>europe-west1</code> (Belgien).</li>
+  <li><strong>Apple:</strong> Käufe (App Store, StoreKit), Mit Apple anmelden, Push-Benachrichtigungsdienst (APNs) und iCloud-Gerätesicherung. Apple verarbeitet deine Zahlungsdaten; wir sehen deine Karten- oder Zahlungsdaten nie. Apple teilt uns deinen Abo-Status und die Transaktionskennung mit.</li>
+</ul>
+<p>Zusätzlich gelten die eigenen Datenschutzerklärungen dieser Anbieter. Wir geben deine Daten an keine anderen Dritten weiter.</p>
+
+<h2 id="basis">6. Zwecke und Rechtsgrundlage</h2>
+<ul>
+  <li><strong>Konto, soziale Funktionen und Benachrichtigungen:</strong> auf Grundlage deiner ausdrücklichen Einwilligung, soweit dies zur Bereitstellung dieser Funktionen nötig ist. Die Erstellung eines Kontos, die Nutzung der Funktion und das Annehmen einer Anfrage drücken diese Einwilligung aus. Du kannst sie widerrufen, indem du dein Konto löschst oder die Funktion entfernst (zum Beispiel einen Begleiter).</li>
+  <li><strong>Premium-Abo:</strong> Erfüllung des Vertrags mit dir.</li>
+  <li><strong>Meldungs-Einträge, Sicherheit und Missbrauchsprävention:</strong> unser berechtigtes Interesse und unsere Pflichten nach den Regeln der App Stores.</li>
+  <li><strong>Rechtliche Verpflichtungen:</strong> soweit erforderlich.</li>
+</ul>
+<p>Wir verwenden deine Daten nicht für Profiling, Marketing oder Werbung, die über das oben Beschriebene hinausgehen.</p>
+
+<h2 id="ads">7. Werbung, Tracking und Verkauf</h2>
+<ul>
+  <li>Die App enthält keine Werbung.</li>
+  <li>Die Werbe-ID (IDFA) wird nicht verwendet, und die App verfolgt dich nicht über andere Apps und Websites hinweg. Deshalb fragen wir nicht nach der Tracking-Berechtigung.</li>
+  <li>Es wird kein Analyse- oder Nutzungsmessungs-SDK von Drittanbietern eingesetzt.</li>
+  <li>Wir verkaufen oder vermieten deine personenbezogenen Daten nicht.</li>
+  <li>Diese Website verwendet keine Cookies und lädt keine Analysedienste oder externen Tracker.</li>
+</ul>
+
+<h2 id="notifications">8. Benachrichtigungen</h2>
+<p>Lokale Benachrichtigungen (Erholungsphasen, Meilensteine, tägliche Motivation) werden auf deinem Gerät geplant und kommen nicht von einem Server. Benachrichtigungen vom Server (Freundschafts- und Begleiter-Anfragen, Annahme, Entfernung, Begleiter-Updates) werden nur gesendet, wenn du ein Konto hast und Benachrichtigungen erlaubt hast. Du musst Benachrichtigungen nicht erlauben; du kannst sie jederzeit in den iOS-Einstellungen oder in der App unter Profil &gt; Benachrichtigungen ausschalten. Damit keine Details auf deinem Sperrbildschirm erscheinen, kannst du „Details in Benachrichtigungen ausblenden“ aktivieren. Begleiter-Benachrichtigungen enthalten keine Details (zum Beispiel „Es gibt Neuigkeiten von &lt;Name&gt;“).</p>
+
+<h2 id="retention">9. Speicherung und Löschung</h2>
+<ul>
+  <li><strong>Daten auf deinem Gerät</strong> bleiben, bis du sie löschst oder die App entfernst.</li>
+  <li><strong>Serverdaten</strong> werden aufbewahrt, solange dein Konto besteht. Wenn du dein Konto löschst, werden sie sofort gelöscht und spätestens innerhalb von 30 Tagen aus allen Sicherungen entfernt.</li>
+  <li><strong>Löschung deines Kontos:</strong> Gehe in der App zu Profil &gt; Konto &amp; Abo &gt; Konto löschen. Dein Konto, dein Name, dein Share-Code, deine Punkte, deine Ausrutscher- und Zurücksetzungs-Einträge, Freundschaften, Begleiter-Verbindungen und Begleiter-Daten, Benachrichtigungsziele und Abo-Verknüpfungen werden endgültig vom Server gelöscht; das lässt sich nicht rückgängig machen. Wenn du dein Konto mit Apple erstellt hast, wird die Verbindung mit Apple beim Löschen widerrufen. Deine Begleiter und die Personen, die du begleitest, werden informiert.</li>
+  <li><strong>Was nicht gelöscht wird:</strong> (a) Meldungs-Einträge werden zur Missbrauchsprävention 2 Jahre aufbewahrt und dann gelöscht. (b) Lokale Tracking-Daten auf deinem Gerät (Zähler, Kennzahlen, frühere Versuche) werden durch das Löschen deines Kontos nicht entfernt; du kannst sie in der App oder durch Deinstallieren der App löschen. (c) Das Löschen deines Kontos kündigt dein Apple-Abo nicht; kündige es separat in den App-Store-Einstellungen. (d) Kopien in iCloud liegen in deinem eigenen iCloud-Account und unterliegen den Verfahren von Apple.</li>
+  <li><strong>Technische Protokolle:</strong> Server-Protokolle, die zum Betrieb des Dienstes geführt werden (Google Cloud), werden nach 30 Tagen automatisch gelöscht.</li>
+</ul>
+<p>Wenn du keinen Zugriff auf die App hast, kannst du eine Löschanfrage an <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a> senden.</p>
+
+<h2 id="icloud">10. iCloud und Sicherung</h2>
+<p>Damit deine Tracking-Daten beim Wechsel auf ein neues Handy auch ohne Konto nicht verloren gehen, ist die Datendatei auf deinem Gerät automatisch in der iCloud-Gerätesicherung deines iPhones enthalten (wenn die iCloud-Sicherung eingeschaltet ist). Apple bewahrt diese Sicherung in deinem iCloud-Account auf; wir können nicht darauf zugreifen. Die App schreibt deine Tracking-Daten nicht separat in iCloud.</p>
+
+<h2 id="transfers">11. Internationale Übermittlungen</h2>
+<p>Firestore-Daten und Serverfunktionen laufen in Europa (<code>europe-west1</code>, Belgien). Einige Google-Dienste wie Authentifizierung, Zustellung von Benachrichtigungen und App-Verifizierung sowie Apple-Dienste laufen auf globaler Infrastruktur, sodass deine Daten in Ländern außerhalb des Europäischen Wirtschaftsraums und der Türkei verarbeitet werden können. Solche Übermittlungen erfolgen mit den geeigneten Garantien, die die Anbieter bieten (zum Beispiel Standardvertragsklauseln), und im Einklang mit dem geltenden Recht. Google verpflichtet sich, die Daten auf Grundlage von Standardvertragsklauseln zu verarbeiten. Wenn du ein Konto erstellst, erteilst du deine ausdrückliche Einwilligung, dass deine Daten auf diese Weise außerhalb der Türkei (in Belgien und, soweit nötig, in anderen Ländern) verarbeitet werden; du kannst deine Einwilligung durch das Löschen deines Kontos widerrufen.</p>
+
+<h2 id="security">12. Sicherheit</h2>
+<p>Daten werden bei der Übertragung verschlüsselt. Die Server-Datenbank ist durch Zugriffsregeln geschützt: Ein Nutzer kann nur auf seine eigenen Daten und die Daten von Personen zugreifen, die sie sehen durften, und der Client kann Felder wie Punkte oder den Premium-Status nicht schreiben. Aufrufe von App und Server werden mit App Check verifiziert. Kein System ist vollkommen sicher; sollte es zu einer Verletzung kommen, machen wir die gesetzlich vorgeschriebenen Meldungen.</p>
+
+<h2 id="children">13. Kinder</h2>
+<p>{{APP_NAME}} richtet sich nicht an Personen unter 16 Jahren. Wenn wir erfahren, dass eine Person unter 16 Jahren ein Konto erstellt hat, löschen wir das Konto und seine Daten. Wenn du glaubst, dass dein Kind ein Konto erstellt hat, schreib an <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+
+<h2 id="rights">14. Deine Rechte</h2>
+<p>Nach dem türkischen Gesetz zum Schutz personenbezogener Daten Nr. 6698 (KVKK), Artikel 11, und der Datenschutz-Grundverordnung der EU (DSGVO) hast du das Recht:</p>
+<ul>
+  <li>zu erfahren, ob deine Daten verarbeitet werden, Auskunft zu verlangen und eine Kopie deiner Daten zu erhalten (Auskunft, Datenübertragbarkeit).</li>
+  <li>unrichtige oder unvollständige Daten berichtigen zu lassen (du kannst deinen Namen und dein Profil in der App korrigieren).</li>
+  <li>deine Daten löschen oder vernichten zu lassen (du kannst dein Konto in der App löschen).</li>
+  <li>die Verarbeitung einzuschränken oder ihr zu widersprechen und deine Einwilligung jederzeit zu widerrufen.</li>
+  <li>zu erfahren, an welche Dritten deine Daten übermittelt wurden, und zu verlangen, dass diese über Berichtigungen oder Löschungen informiert werden.</li>
+  <li>einem Ergebnis zu widersprechen, das ausschließlich durch automatisierte Verarbeitung gegen dich entstanden ist, und Ersatz für Schäden durch rechtswidrige Verarbeitung zu verlangen (KVKK).</li>
+  <li>dich bei einer Aufsichtsbehörde zu beschweren: in der Türkei beim Rat für den Schutz personenbezogener Daten (Personal Data Protection Board); in der EU bei der Datenschutzbehörde deines Landes.</li>
+</ul>
+<p>Sende deine Anfrage an <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>. Zur Überprüfung deiner Identität können wir dich bitten, von der E-Mail-Adresse deines Kontos zu schreiben oder deinen Share-Code anzugeben. Wir beantworten Anfragen spätestens innerhalb von 30 Tagen.</p>
+
+<h2 id="changes">15. Änderungen</h2>
+<p>Wir können diese Erklärung aktualisieren, wenn sich die App oder das Recht ändert. Wichtige Änderungen geben wir in der App oder auf dieser Seite bekannt; das Datum des Inkrafttretens der aktuellen Fassung steht oben auf der Seite. Diese Fassung ist am {{EFFECTIVE_DATE}} in Kraft getreten.</p>

@@ -7,8 +7,7 @@
   <meta name="description" content="{{DESCRIPTION}}">
   <meta name="color-scheme" content="dark light">
   <link rel="canonical" href="{{CANONICAL}}">
-  <link rel="alternate" hreflang="tr" href="{{ALT_TR}}">
-  <link rel="alternate" hreflang="en" href="{{ALT_EN}}">
+  {{HREFLANGS}}
   <link rel="icon" type="image/svg+xml" href="{{ROOT}}assets/favicon.svg">
   <link rel="stylesheet" href="{{ROOT}}assets/style.css">
 </head>
@@ -20,7 +19,10 @@
       <nav aria-label="{{MENU}}">
         {{NAV}}
       </nav>
-      <a class="lang" href="{{SWITCH_HREF}}" hreflang="{{SWITCH_LANG}}" lang="{{SWITCH_LANG}}" title="{{SWITCH_TITLE}}">{{SWITCH_LABEL}}</a>
+      <details class="langmenu">
+        <summary class="lang" aria-label="{{LANG_LABEL}}: {{LANG_NAME}}">{{LANG_NAME}}</summary>
+        {{LANG_LIST_MENU}}
+      </details>
     </div>
   </header>
   <main id="main" class="wrap">
@@ -29,6 +31,9 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>{{FOOTER_NOTE}}</p>
+      <nav class="footer-langs-wrap" aria-label="{{LANG_LABEL}}">
+        {{LANG_LIST_FOOTER}}
+      </nav>
       <p class="links">{{FOOTER_LINKS}} <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a></p>
       <p class="small">&copy; 2026 {{APP_NAME}}. {{FOOTER_RIGHTS}}</p>
     </div>
