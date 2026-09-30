@@ -33,7 +33,7 @@
 <div class="note" role="note">
   <p><strong>Kısaca:</strong></p>
   <ul>
-    <li>Hesap açmazsan sayaç, metrikler ve geçmiş denemelerin yalnızca cihazında (ve istersen kendi iCloud yedeğinde) kalır; bize ulaşmaz.</li>
+    <li>Hesap açmazsan sayaç, metrikler ve geçmiş denemelerin yalnızca cihazında (ve iPhone'unun iCloud yedeğinde) kalır; bize ulaşmaz.</li>
     <li>Hesap yalnızca arkadaş sıralaması ve gözetmen özellikleri içindir. Hesap açarsan aşağıda sayılan veriler sunucuya gider.</li>
     <li>Reklam yok, izleme yok, reklam kimliği yok, üçüncü taraf analitik yok. Verilerini satmayız.</li>
     <li>Hesabını uygulamadan (Profil &gt; Hesap ve Abonelik) kendin silebilirsin.</li>
@@ -109,7 +109,7 @@
 <h2 id="saglayici">5. Hizmet sağlayıcılar (veri işleyenler)</h2>
 <ul>
   <li><strong>Google Firebase / Google Cloud:</strong> Kimlik doğrulama (Firebase Authentication), veri tabanı (Cloud Firestore), sunucu fonksiyonları (Cloud Functions), bildirim gönderimi (Firebase Cloud Messaging) ve uygulama doğrulaması (App Check). Firestore verileri ve fonksiyonlar Avrupa'da, <code>europe-west1</code> (Belçika) bölgesinde çalışır.</li>
-  <li><strong>Apple:</strong> Satın almalar (App Store, StoreKit), Sign in with Apple, anlık bildirim altyapısı (APNs) ve iCloud. Ödeme bilgilerini Apple işler; biz kredi kartı ya da ödeme bilgini görmeyiz. Apple bize abonelik durumunu ve işlem kimliğini bildirir.</li>
+  <li><strong>Apple:</strong> Satın almalar (App Store, StoreKit), Sign in with Apple, anlık bildirim altyapısı (APNs) ve iCloud cihaz yedeği. Ödeme bilgilerini Apple işler; biz kredi kartı ya da ödeme bilgini görmeyiz. Apple bize abonelik durumunu ve işlem kimliğini bildirir.</li>
 </ul>
 <p>Bu sağlayıcıların kendi gizlilik politikaları da geçerlidir. Başka bir üçüncü tarafla verini paylaşmayız.</p>
 
@@ -145,7 +145,7 @@
 <p>Uygulamaya erişemiyorsan silme talebini <a href="mailto:miselylab@gmail.com">miselylab@gmail.com</a> adresine yazabilirsin.</p>
 
 <h2 id="icloud">10. iCloud ve yedekleme</h2>
-<p>Hesap açmasan da takip verilerin yeni bir telefona geçerken kaybolmasın diye, cihazındaki veri dosyası iCloud cihaz yedeğine kendiliğinden girer (iCloud yedeklemen açıksa). Ayrıca küçük bir kopya, iCloud anahtar-değer deposunda tutulur. Bu kopya cihazda şifrelenir; şifre anahtarı iCloud Anahtar Zinciri'nde saklanır ve bize ya da üçüncü taraflara açık değildir. iCloud'u Apple işler, verilere erişimimiz yoktur. iCloud'u kapatırsan bu yedekleme yapılmaz; bu durumda yeni telefonda veriler geri gelmeyebilir.</p>
+<p>Hesap açmasan da takip verilerin yeni bir telefona geçerken kaybolmasın diye, cihazındaki veri dosyası iPhone'unun iCloud cihaz yedeğine kendiliğinden girer (iCloud Yedekleme açıksa). Bu yedek Apple tarafından senin iCloud hesabında tutulur; biz erişemeyiz. Uygulama, takip verilerini ayrıca iCloud'a yazmaz.</p>
 
 <h2 id="aktarim">11. Yurt dışına aktarım</h2>
 <p>Firestore verileri ve sunucu fonksiyonları Avrupa'da (<code>europe-west1</code>, Belçika) çalışır. Kimlik doğrulama, bildirim gönderimi ve uygulama doğrulaması gibi bazı Google hizmetleri ile Apple hizmetleri küresel altyapıda çalıştığından verilerin Avrupa Ekonomik Alanı ve Türkiye dışındaki ülkelerde işlenmesi mümkündür. Bu aktarımlar, sağlayıcıların sunduğu uygun güvencelere (ör. standart sözleşme hükümleri) ve ilgili mevzuata uygun yapılır.</p>

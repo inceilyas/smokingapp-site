@@ -33,7 +33,7 @@
 <div class="note" role="note">
   <p><strong>In short:</strong></p>
   <ul>
-    <li>If you do not create an account, your counter, metrics and past attempts stay on your device (and, if you wish, in your own iCloud backup). They do not reach us.</li>
+    <li>If you do not create an account, your counter, metrics and past attempts stay on your device (and in your iPhone's iCloud backup). They do not reach us.</li>
     <li>An account is only for the friends leaderboard and watcher features. If you create one, the data listed below is sent to our servers.</li>
     <li>No ads, no tracking, no advertising identifier, no third-party analytics. We do not sell your data.</li>
     <li>You can delete your account yourself in the app (Profile &gt; Account &amp; Subscription).</li>
@@ -109,7 +109,7 @@
 <h2 id="processors">5. Service providers (processors)</h2>
 <ul>
   <li><strong>Google Firebase / Google Cloud:</strong> authentication (Firebase Authentication), database (Cloud Firestore), server functions (Cloud Functions), notification delivery (Firebase Cloud Messaging) and app verification (App Check). Firestore data and functions run in Europe, in the <code>europe-west1</code> (Belgium) region.</li>
-  <li><strong>Apple:</strong> purchases (App Store, StoreKit), Sign in with Apple, push notification service (APNs) and iCloud. Apple processes your payment information; we never see your card or payment details. Apple tells us your subscription status and transaction identifier.</li>
+  <li><strong>Apple:</strong> purchases (App Store, StoreKit), Sign in with Apple, push notification service (APNs) and iCloud device backup. Apple processes your payment information; we never see your card or payment details. Apple tells us your subscription status and transaction identifier.</li>
 </ul>
 <p>These providers' own privacy policies also apply. We do not share your data with any other third party.</p>
 
@@ -145,7 +145,7 @@
 <p>If you cannot access the app, you can send a deletion request to <a href="mailto:miselylab@gmail.com">miselylab@gmail.com</a>.</p>
 
 <h2 id="icloud">10. iCloud and backup</h2>
-<p>So that your tracking data is not lost when you move to a new phone, even without an account, the data file on your device is included in your iCloud device backup automatically (if iCloud Backup is on). A small copy is also kept in iCloud key-value storage. This copy is encrypted on the device; the encryption key is kept in iCloud Keychain and is not available to us or to third parties. Apple operates iCloud and we have no access to that data. If you turn iCloud off, this backup is not made and your data may not return on a new phone.</p>
+<p>So that your tracking data is not lost when you move to a new phone, even without an account, the data file on your device is included in your iPhone's iCloud device backup automatically (if iCloud Backup is on). Apple keeps this backup in your iCloud account; we cannot access it. The app does not separately write your tracking data to iCloud.</p>
 
 <h2 id="transfers">11. International transfers</h2>
 <p>Firestore data and server functions run in Europe (<code>europe-west1</code>, Belgium). Some Google services such as authentication, notification delivery and app verification, and Apple services, run on global infrastructure, so your data may be processed in countries outside the European Economic Area and Türkiye. Such transfers are made with the appropriate safeguards offered by the providers (for example standard contractual clauses) and in line with applicable law.</p>
