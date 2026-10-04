@@ -53,7 +53,7 @@
   </header>
   <main id="main" class="wrap">
 <h1>Politique de confidentialité</h1>
-<p class="meta">Date d'entrée en vigueur&nbsp;: 30 septembre 2026</p>
+<p class="meta">Date d'entrée en vigueur&nbsp;: 4 octobre 2026</p>
 
 <div class="note legal-note" role="note"><p>En cas de divergence, la version anglaise prévaut. <a href="../en/privacy.html" hreflang="en" lang="en">Version anglaise</a></p></div>
 
@@ -62,7 +62,7 @@
   <ul>
     <li>Si tu ne crées pas de compte, ton compteur, tes indicateurs et tes essais passés restent sur ton appareil (et dans la sauvegarde iCloud de ton iPhone). Ils ne nous parviennent pas.</li>
     <li>Un compte sert uniquement au classement des amis et aux fonctions de veilleur. Si tu en crées un, les données listées ci-dessous sont envoyées à nos serveurs.</li>
-    <li>Pas de publicité, pas de pistage, pas d'identifiant publicitaire, pas d'outil d'analyse tiers. Nous ne vendons pas tes données.</li>
+    <li>Pas de publicité, pas de pistage, pas d'identifiant publicitaire, et aucun SDK d'analyse ou de publicité tiers dans l'app. Si tu as un compte et que tu fais un achat, tes données d'achat sont envoyées depuis nos serveurs à RevenueCat, uniquement pour le suivi des revenus. Nous ne vendons pas tes données.</li>
     <li>Tu peux supprimer ton compte toi-même dans l'app (Profil &gt; Compte et abonnement).</li>
   </ul>
 </div>
@@ -101,13 +101,13 @@
 <p>Ces données sont conservées dans un fichier du stockage de l'app. Pour la sauvegarde iCloud, consulte <a href="#icloud">cette section</a>.</p>
 
 <h2 id="server">3. Données envoyées si tu crées un compte</h2>
-<p>La création d'un compte est facultative et se fait par e-mail ou avec Se connecter avec Apple. Lorsque tu crées un compte et que tu utilises les fonctions associées, les données suivantes sont envoyées à nos serveurs (Google Firebase / Google Cloud)&nbsp;:</p>
+<p>La création d'un compte est facultative et se fait avec Se connecter avec Apple. Lorsque tu crées un compte et que tu utilises les fonctions associées, les données suivantes sont envoyées à nos serveurs (Google Firebase / Google Cloud)&nbsp;:</p>
 <div class="table-wrap">
 <table>
   <caption>Données stockées sur le serveur pour un utilisateur disposant d'un compte</caption>
   <thead><tr><th scope="col">Données</th><th scope="col">Quand</th><th scope="col">Finalité</th></tr></thead>
   <tbody>
-    <tr><td>Adresse e-mail et identifiants de connexion (avec la connexion par e-mail, le mot de passe est traité par Firebase Authentication et nous ne le voyons jamais&nbsp;; avec la connexion Apple, l'identifiant fourni par Apple, et ton adresse e-mail peut être l'adresse relais privée d'Apple)</td><td>Quand tu crées un compte</td><td>Se connecter, reconnaître le compte</td></tr>
+    <tr><td>Identifiants de connexion (l'identifiant fourni par Apple avec Se connecter avec Apple) et l'adresse e-mail qu'Apple nous transmet (il peut s'agir de l'adresse relais privée d'Apple)</td><td>Quand tu crées un compte</td><td>Se connecter, reconnaître le compte</td></tr>
     <tr><td>Ton nom (saisi par toi&nbsp;; il n'est pas repris d'Apple)</td><td>Quand tu enregistres un nom</td><td>Afficher ton nom à tes amis et à tes veilleurs, l'utiliser dans les notifications</td></tr>
     <tr><td>Code de partage (un code aléatoire de 12 caractères)</td><td>À la création du compte</td><td>Ajouter des amis et des veilleurs</td></tr>
     <tr><td>Heure de début du compte (heure du serveur)</td><td>À la création du compte</td><td>Calcul des points (les points comptent à partir du moment où le compte est créé)</td></tr>
@@ -122,6 +122,7 @@
   </tbody>
 </table>
 </div>
+<p>Si tu crées un compte et que tu achètes Premium, une partie de tes données d'achat est aussi envoyée depuis nos serveurs à RevenueCat pour le suivi des abonnements et des revenus&nbsp;; la <a href="#processors">section 5</a> indique ce qui est envoyé et ce qui ne l'est pas.</p>
 <p>Une partie de ces données révèle indirectement tes efforts pour arrêter de fumer et peut être considérée comme une donnée de santé. C'est pourquoi nous ne les traitons que lorsque tu crées un compte et que tu utilises la fonction concernée, et uniquement pour fournir cette fonction.</p>
 <p>Comme pour tout service internet, lorsque ton appareil se connecte à nos serveurs, ton adresse IP et les détails de connexion sont traités techniquement par l'infrastructure de Google et d'Apple. Apple App Attest et Firebase App Check servent à vérifier que les requêtes proviennent d'un appareil et d'une app authentiques&nbsp;; ils ne sont pas utilisés pour analyser ton identité ou tes habitudes d'utilisation.</p>
 
@@ -137,6 +138,7 @@
 <ul>
   <li><strong>Google Firebase / Google Cloud&nbsp;:</strong> authentification (Firebase Authentication), base de données (Cloud Firestore), fonctions serveur (Cloud Functions), envoi des notifications (Firebase Cloud Messaging) et vérification de l'app (App Check). Les données Firestore et les fonctions s'exécutent en Europe, dans la région <code>europe-west1</code> (Belgique).</li>
   <li><strong>Apple&nbsp;:</strong> achats (App Store, StoreKit), Se connecter avec Apple, service de notifications push (APNs) et sauvegarde iCloud de l'appareil. Apple traite tes informations de paiement&nbsp;; nous ne voyons jamais les données de ta carte ni de ton paiement. Apple nous indique le statut de ton abonnement et l'identifiant de transaction.</li>
+  <li><strong>RevenueCat, Inc. (États-Unis)&nbsp;:</strong> suivi des abonnements et des revenus (tableaux de bord des ventes et notifications de vente pour le développeur). RevenueCat agit comme notre sous-traitant au titre de ses conditions de traitement des données (DPA). Les données sont envoyées depuis nos serveurs, pas depuis l'app&nbsp;; l'app ne contient aucun SDK RevenueCat. RevenueCat ne décide pas si tu as accès à Premium. Uniquement si tu as un compte et que tu fais un achat intégré (Premium), nous envoyons&nbsp;: ton identifiant de compte (l'identifiant utilisateur Firebase, un identifiant aléatoire)&nbsp;; les enregistrements de transaction d'achat signés par Apple (produit, dates d'achat et de renouvellement, prix et devise, pays de la boutique, identifiants de transaction, et environnement bac à sable ou production)&nbsp;; et les notifications serveur de l'App Store d'Apple concernant les événements d'abonnement (renouvellement, résiliation, remboursement). Nous n'envoyons à RevenueCat ni ton nom, ni ton adresse e-mail, ni tes données de santé ou d'arrêt du tabac, ni compteurs, événements, identifiants d'appareil ou données d'usage.</li>
 </ul>
 <p>Les politiques de confidentialité propres à ces prestataires s'appliquent également. Nous ne partageons tes données avec aucun autre tiers.</p>
 
@@ -153,7 +155,7 @@
 <ul>
   <li>L'app ne contient aucune publicité.</li>
   <li>L'identifiant publicitaire (IDFA) n'est pas utilisé et l'app ne te suit pas à travers d'autres apps et sites web. C'est pourquoi nous ne demandons pas l'autorisation de pistage.</li>
-  <li>Aucun outil d'analyse tiers ni SDK de mesure d'utilisation n'est utilisé.</li>
+  <li>Aucun SDK tiers d'analyse, de mesure d'utilisation ou de publicité n'est utilisé dans l'app. Les données d'achat sont envoyées depuis nos serveurs à RevenueCat uniquement pour le suivi des revenus (<a href="#processors">section 5</a>).</li>
   <li>Nous ne vendons ni ne louons tes données personnelles.</li>
   <li>Ce site web n'utilise aucun cookie et ne charge aucun outil d'analyse ni traceur externe.</li>
 </ul>
@@ -165,7 +167,7 @@
 <ul>
   <li><strong>Les données sur ton appareil</strong> restent jusqu'à ce que tu les supprimes ou que tu désinstalles l'app.</li>
   <li><strong>Les données du serveur</strong> sont conservées tant que ton compte est ouvert. Lorsque tu supprimes ton compte, elles sont supprimées immédiatement et retirées de toute sauvegarde dans un délai maximal de 30 jours.</li>
-  <li><strong>Suppression de ton compte&nbsp;:</strong> dans l'app, va dans Profil &gt; Compte et abonnement &gt; Supprimer le compte. Ton compte, ton nom, ton code de partage, tes points, tes enregistrements d'écart et de réinitialisation, tes amitiés, tes relations de veilleur et les données du veilleur, tes cibles de notification et tes liens d'abonnement sont définitivement supprimés du serveur&nbsp;; cette action est irréversible. Si tu as créé ton compte avec Se connecter avec Apple, le lien avec Apple est révoqué lorsque tu le supprimes. Tes veilleurs et les personnes que tu suis sont informés.</li>
+  <li><strong>Suppression de ton compte&nbsp;:</strong> dans l'app, va dans Profil &gt; Compte et abonnement &gt; Supprimer le compte. Ton compte, ton nom, ton code de partage, tes points, tes enregistrements d'écart et de réinitialisation, tes amitiés, tes relations de veilleur et les données du veilleur, tes cibles de notification et tes liens d'abonnement sont définitivement supprimés du serveur&nbsp;; cette action est irréversible. Si tu as créé ton compte avec Se connecter avec Apple, le lien avec Apple est révoqué lorsque tu le supprimes. Tes veilleurs et les personnes que tu suis sont informés. Lorsque tu supprimes ton compte, nous demandons aussi à RevenueCat de supprimer ton enregistrement client.</li>
   <li><strong>Ce qui n'est pas supprimé&nbsp;:</strong> (a) Les enregistrements de signalement sont conservés pendant 2 ans pour prévenir les abus, puis supprimés. (b) Les données de suivi locales sur ton appareil (compteur, indicateurs, essais passés) ne sont pas effacées par la suppression de ton compte&nbsp;; tu peux les supprimer dans l'app ou en désinstallant l'app. (c) La suppression de ton compte ne résilie pas ton abonnement Apple&nbsp;; résilie-le séparément dans les réglages de l'App Store. (d) Les copies dans iCloud se trouvent dans ton propre compte iCloud et dépendent des procédures d'Apple.</li>
   <li><strong>Journaux techniques&nbsp;:</strong> les journaux du serveur conservés pour faire fonctionner le service (Google Cloud) sont supprimés automatiquement après 30 jours.</li>
 </ul>
@@ -175,7 +177,7 @@
 <p>Pour que tes données de suivi ne soient pas perdues lorsque tu changes de téléphone, même sans compte, le fichier de données de ton appareil est inclus automatiquement dans la sauvegarde iCloud de ton iPhone (si la Sauvegarde iCloud est activée). Apple conserve cette sauvegarde dans ton compte iCloud&nbsp;; nous n'y avons pas accès. L'app n'écrit pas séparément tes données de suivi dans iCloud.</p>
 
 <h2 id="transfers">11. Transferts internationaux</h2>
-<p>Les données Firestore et les fonctions serveur s'exécutent en Europe (<code>europe-west1</code>, Belgique). Certains services Google, comme l'authentification, l'envoi des notifications et la vérification de l'app, ainsi que les services d'Apple, s'exécutent sur une infrastructure mondiale&nbsp;; tes données peuvent donc être traitées dans des pays situés en dehors de l'Espace économique européen et de la Turquie. Ces transferts sont effectués avec les garanties appropriées offertes par les prestataires (par exemple des clauses contractuelles types) et conformément à la loi applicable. Google s'engage à traiter les données dans le cadre de clauses contractuelles types. Lorsque tu crées un compte, tu donnes ton consentement explicite à ce que tes données soient traitées de cette manière en dehors de la Turquie (en Belgique et, si nécessaire, dans d'autres pays)&nbsp;; tu peux retirer ton consentement en supprimant ton compte.</p>
+<p>Les données Firestore et les fonctions serveur s'exécutent en Europe (<code>europe-west1</code>, Belgique). Certains services Google, comme l'authentification, l'envoi des notifications et la vérification de l'app, ainsi que les services d'Apple, s'exécutent sur une infrastructure mondiale&nbsp;; tes données peuvent donc être traitées dans des pays situés en dehors de l'Espace économique européen et de la Turquie. Ces transferts sont effectués avec les garanties appropriées offertes par les prestataires (par exemple des clauses contractuelles types) et conformément à la loi applicable. Google s'engage à traiter les données dans le cadre de clauses contractuelles types. RevenueCat, Inc. traite aux États-Unis les données d'achat que nous lui transmettons pour le suivi des revenus. Lorsque tu crées un compte, tu donnes ton consentement explicite à ce que tes données soient traitées de cette manière en dehors de la Turquie (dans l'Union européenne, aux États-Unis et, si nécessaire, dans d'autres pays)&nbsp;; tu peux retirer ton consentement en supprimant ton compte.</p>
 
 <h2 id="security">12. Sécurité</h2>
 <p>Les données sont chiffrées en transit. La base de données du serveur est protégée par des règles d'accès&nbsp;: un utilisateur ne peut accéder qu'à ses propres données et à celles des personnes autorisées à les voir, et le client ne peut pas écrire des champs tels que les points ou le statut Premium. Les appels de l'app et du serveur sont vérifiés avec App Check. Aucun système n'est totalement sûr&nbsp;; en cas de violation, nous effectuerons les notifications exigées par la loi.</p>
@@ -197,7 +199,7 @@
 <p>Envoie ta demande à <a href="mailto:miselylab@gmail.com">miselylab@gmail.com</a>. Pour vérifier ton identité, nous pouvons te demander d'écrire depuis l'adresse e-mail de ton compte ou d'indiquer ton code de partage. Nous répondons aux demandes dans un délai maximal de 30 jours.</p>
 
 <h2 id="changes">15. Modifications</h2>
-<p>Nous pouvons mettre à jour cette politique en fonction de l'évolution de l'app ou de la loi. Nous annoncerons les modifications importantes dans l'app ou sur cette page&nbsp;; la date d'entrée en vigueur de la version actuelle figure en haut de la page. Cette version est entrée en vigueur le 30 septembre 2026.</p>
+<p>Nous pouvons mettre à jour cette politique en fonction de l'évolution de l'app ou de la loi. Nous annoncerons les modifications importantes dans l'app ou sur cette page&nbsp;; la date d'entrée en vigueur de la version actuelle figure en haut de la page. Cette version est entrée en vigueur le 4 octobre 2026.</p>
   </main>
   <footer class="site-footer">
     <div class="wrap">

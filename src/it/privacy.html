@@ -9,7 +9,7 @@ description: Spiega cosa {{APP_NAME}} conserva sul tuo dispositivo, cosa viene i
   <ul>
     <li>Se non crei un account, il contatore, le metriche e i tentativi passati restano sul tuo dispositivo (e nel backup iCloud del tuo iPhone). Non arrivano a noi.</li>
     <li>Un account serve solo per la classifica amici e per la funzione osservatore. Se ne crei uno, i dati elencati sotto vengono inviati ai nostri server.</li>
-    <li>Niente pubblicità, niente tracciamento, nessun identificatore pubblicitario, nessuna analisi di terze parti. Non vendiamo i tuoi dati.</li>
+    <li>Niente pubblicità, niente tracciamento, nessun identificatore pubblicitario e nessun SDK di analisi o pubblicitario di terze parti nell'app. Se hai un account e fai un acquisto, i dati dell'acquisto vengono inviati dai nostri server a RevenueCat solo per il resoconto dei ricavi. Non vendiamo i tuoi dati.</li>
     <li>Puoi eliminare il tuo account direttamente nell'app (Profilo &gt; Account e abbonamento).</li>
   </ul>
 </div>
@@ -48,13 +48,13 @@ description: Spiega cosa {{APP_NAME}} conserva sul tuo dispositivo, cosa viene i
 <p>Questi dati sono conservati in un file nell'archivio dell'app. Per il backup su iCloud, vedi <a href="#icloud">questa sezione</a>.</p>
 
 <h2 id="server">3. Dati inviati se crei un account</h2>
-<p>Creare un account è facoltativo e si fa con email o Accedi con Apple. Quando crei un account e usi le funzioni correlate, i dati seguenti vengono inviati ai nostri server (Google Firebase / Google Cloud):</p>
+<p>Creare un account è facoltativo e si fa con Accedi con Apple. Quando crei un account e usi le funzioni correlate, i dati seguenti vengono inviati ai nostri server (Google Firebase / Google Cloud):</p>
 <div class="table-wrap">
 <table>
   <caption>Dati conservati sul server per un utente con un account</caption>
   <thead><tr><th scope="col">Dato</th><th scope="col">Quando</th><th scope="col">Finalità</th></tr></thead>
   <tbody>
-    <tr><td>Indirizzo email e credenziali di accesso (con l'accesso via email la password è trattata da Firebase Authentication e noi non la vediamo mai; con l'accesso tramite Apple, l'identificatore fornito da Apple, e la tua email può essere l'indirizzo di inoltro privato di Apple)</td><td>Quando crei un account</td><td>Accedere, riconoscere l'account</td></tr>
+    <tr><td>Credenziali di accesso (l'identificatore fornito da Apple con Accedi con Apple) e l'indirizzo email che Apple ci comunica (può essere l'indirizzo di inoltro privato di Apple)</td><td>Quando crei un account</td><td>Accedere, riconoscere l'account</td></tr>
     <tr><td>Il tuo nome (inserito da te; non viene preso da Apple)</td><td>Quando salvi un nome</td><td>Mostrare il tuo nome ad amici e osservatori, usarlo nelle notifiche</td></tr>
     <tr><td>Codice di condivisione (un codice casuale di 12 caratteri)</td><td>Quando l'account viene creato</td><td>Aggiungere amici e osservatori</td></tr>
     <tr><td>Ora di inizio dell'account (ora del server)</td><td>Quando l'account viene creato</td><td>Calcolo dei punti (i punti contano dal momento in cui l'account viene creato)</td></tr>
@@ -69,6 +69,7 @@ description: Spiega cosa {{APP_NAME}} conserva sul tuo dispositivo, cosa viene i
   </tbody>
 </table>
 </div>
+<p>Se crei un account e acquisti Premium, alcuni dati dei tuoi acquisti vengono inviati anche dai nostri server a RevenueCat per il resoconto di abbonamenti e ricavi; la <a href="#processors">sezione 5</a> elenca cosa viene inviato e cosa no.</p>
 <p>Alcuni di questi dati mostrano indirettamente il tuo impegno a smettere di fumare e possono essere considerati informazioni sulla salute. Per questo li trattiamo solo quando crei un account e usi la funzione correlata, e solo per fornire quella funzione.</p>
 <p>Come per ogni servizio internet, quando il tuo dispositivo si connette ai nostri server il tuo indirizzo IP e i dettagli della connessione vengono trattati tecnicamente dall'infrastruttura di Google e di Apple. Apple App Attest e Firebase App Check sono usati per verificare che le richieste provengano da un dispositivo e da un'app autentici; non vengono usati per esaminare la tua identità o le tue abitudini di utilizzo.</p>
 
@@ -84,6 +85,7 @@ description: Spiega cosa {{APP_NAME}} conserva sul tuo dispositivo, cosa viene i
 <ul>
   <li><strong>Google Firebase / Google Cloud:</strong> autenticazione (Firebase Authentication), database (Cloud Firestore), funzioni server (Cloud Functions), invio delle notifiche (Firebase Cloud Messaging) e verifica dell'app (App Check). I dati di Firestore e le funzioni sono eseguiti in Europa, nella regione <code>europe-west1</code> (Belgio).</li>
   <li><strong>Apple:</strong> acquisti (App Store, StoreKit), Accedi con Apple, servizio di notifiche push (APNs) e backup del dispositivo su iCloud. Apple tratta i tuoi dati di pagamento; noi non vediamo mai i dati della tua carta o del pagamento. Apple ci comunica lo stato del tuo abbonamento e l'identificativo della transazione.</li>
+  <li><strong>RevenueCat, Inc. (USA):</strong> resoconto di abbonamenti e ricavi (dashboard delle vendite e notifiche di vendita per lo sviluppatore). RevenueCat agisce come nostro responsabile del trattamento in base ai propri termini di trattamento dei dati (DPA). I dati sono inviati dai nostri server, non dall'app; l'app non contiene alcun SDK di RevenueCat. RevenueCat non decide se hai accesso a Premium. Solo se hai un account ed effettui un acquisto in-app (Premium), inviamo: il tuo identificativo account (l'ID utente Firebase, un identificativo casuale); i record delle transazioni di acquisto firmati da Apple (prodotto, date di acquisto e di rinnovo, prezzo e valuta, paese dello store, identificativi delle transazioni e ambiente sandbox o produzione); e le notifiche server dell'App Store di Apple sugli eventi dell'abbonamento (rinnovo, annullamento, rimborso). A RevenueCat non inviamo il tuo nome, il tuo indirizzo email, dati sulla salute o sul fumo/sulla cessazione, contatori, eventi, identificativi del dispositivo né dati di utilizzo.</li>
 </ul>
 <p>Si applicano anche le informative sulla privacy di questi fornitori. Non condividiamo i tuoi dati con nessun'altra terza parte.</p>
 
@@ -100,7 +102,7 @@ description: Spiega cosa {{APP_NAME}} conserva sul tuo dispositivo, cosa viene i
 <ul>
   <li>L'app non ha pubblicità.</li>
   <li>L'identificatore pubblicitario (IDFA) non viene usato e l'app non ti traccia su altre app e siti web. Per questo non chiediamo l'autorizzazione al tracciamento.</li>
-  <li>Non viene usato alcun SDK di analisi o di misurazione dell'utilizzo di terze parti.</li>
+  <li>Nell'app non viene usato alcun SDK di analisi, di misurazione dell'utilizzo o pubblicitario di terze parti. I dati degli acquisti vengono inviati dai nostri server a RevenueCat solo per il resoconto dei ricavi (<a href="#processors">sezione 5</a>).</li>
   <li>Non vendiamo né affittiamo i tuoi dati personali.</li>
   <li>Questo sito web non usa cookie e non carica strumenti di analisi né tracker esterni.</li>
 </ul>
@@ -112,7 +114,7 @@ description: Spiega cosa {{APP_NAME}} conserva sul tuo dispositivo, cosa viene i
 <ul>
   <li><strong>I dati sul tuo dispositivo</strong> restano finché non li elimini o non rimuovi l'app.</li>
   <li><strong>I dati sul server</strong> vengono conservati finché il tuo account è aperto. Quando elimini il tuo account, vengono eliminati immediatamente e rimossi da eventuali backup entro 30 giorni al massimo.</li>
-  <li><strong>Eliminazione dell'account:</strong> nell'app vai su Profilo &gt; Account e abbonamento &gt; Elimina account. Il tuo account, il nome, il codice di condivisione, i punti, le registrazioni dei passi falsi e degli azzeramenti, le amicizie, i legami con gli osservatori e i dati per l'osservatore, le destinazioni delle notifiche e i collegamenti all'abbonamento vengono eliminati definitivamente dal server; l'operazione non può essere annullata. Se hai creato il tuo account con Accedi con Apple, il collegamento con Apple viene revocato quando lo elimini. I tuoi osservatori e le persone che segui vengono informati.</li>
+  <li><strong>Eliminazione dell'account:</strong> nell'app vai su Profilo &gt; Account e abbonamento &gt; Elimina account. Il tuo account, il nome, il codice di condivisione, i punti, le registrazioni dei passi falsi e degli azzeramenti, le amicizie, i legami con gli osservatori e i dati per l'osservatore, le destinazioni delle notifiche e i collegamenti all'abbonamento vengono eliminati definitivamente dal server; l'operazione non può essere annullata. Se hai creato il tuo account con Accedi con Apple, il collegamento con Apple viene revocato quando lo elimini. I tuoi osservatori e le persone che segui vengono informati. Quando elimini l'account, chiediamo anche a RevenueCat di eliminare il tuo record cliente.</li>
   <li><strong>Cosa non viene eliminato:</strong> (a) Le registrazioni delle segnalazioni sono conservate per 2 anni per prevenire gli abusi, poi eliminate. (b) I dati di monitoraggio locali sul tuo dispositivo (contatore, metriche, tentativi passati) non vengono rimossi dall'eliminazione del tuo account; puoi eliminarli nell'app o disinstallando l'app. (c) Eliminare il tuo account non annulla il tuo abbonamento Apple; annullalo separatamente nelle impostazioni dell'App Store. (d) Le copie su iCloud si trovano nel tuo account iCloud e sono soggette ai processi di Apple.</li>
   <li><strong>Log tecnici:</strong> i log del server conservati per far funzionare il servizio (Google Cloud) vengono eliminati automaticamente dopo 30 giorni.</li>
 </ul>
@@ -122,7 +124,7 @@ description: Spiega cosa {{APP_NAME}} conserva sul tuo dispositivo, cosa viene i
 <p>Affinché i tuoi dati di monitoraggio non vadano persi quando passi a un nuovo telefono, anche senza un account, il file dei dati sul tuo dispositivo è incluso automaticamente nel backup del dispositivo su iCloud del tuo iPhone (se Backup iCloud è attivo). Apple conserva questo backup nel tuo account iCloud; noi non possiamo accedervi. L'app non scrive separatamente i tuoi dati di monitoraggio su iCloud.</p>
 
 <h2 id="transfers">11. Trasferimenti internazionali</h2>
-<p>I dati di Firestore e le funzioni server sono eseguiti in Europa (<code>europe-west1</code>, Belgio). Alcuni servizi di Google, come l'autenticazione, l'invio delle notifiche e la verifica dell'app, e i servizi di Apple, funzionano su un'infrastruttura globale, quindi i tuoi dati possono essere trattati in paesi al di fuori dello Spazio economico europeo e della Turchia. Tali trasferimenti avvengono con le garanzie adeguate offerte dai fornitori (ad esempio le clausole contrattuali tipo) e in conformità alla legge applicabile. Google si impegna a trattare i dati in base alle clausole contrattuali tipo. Quando crei un account, dai il tuo consenso esplicito al trattamento dei tuoi dati al di fuori della Turchia (in Belgio e, dove necessario, in altri paesi) in questo modo; puoi revocare il consenso eliminando il tuo account.</p>
+<p>I dati di Firestore e le funzioni server sono eseguiti in Europa (<code>europe-west1</code>, Belgio). Alcuni servizi di Google, come l'autenticazione, l'invio delle notifiche e la verifica dell'app, e i servizi di Apple, funzionano su un'infrastruttura globale, quindi i tuoi dati possono essere trattati in paesi al di fuori dello Spazio economico europeo e della Turchia. Tali trasferimenti avvengono con le garanzie adeguate offerte dai fornitori (ad esempio le clausole contrattuali tipo) e in conformità alla legge applicabile. Google si impegna a trattare i dati in base alle clausole contrattuali tipo. RevenueCat, Inc. tratta negli Stati Uniti i dati degli acquisti che le inviamo per il resoconto dei ricavi. Quando crei un account, dai il tuo consenso esplicito al trattamento dei tuoi dati al di fuori della Turchia (nell'Unione europea, negli Stati Uniti e, dove necessario, in altri paesi) in questo modo; puoi revocare il consenso eliminando il tuo account.</p>
 
 <h2 id="security">12. Sicurezza</h2>
 <p>I dati sono cifrati in transito. Il database del server è protetto da regole di accesso: un utente può accedere solo ai propri dati e ai dati delle persone autorizzate a vederli, e il client non può scrivere campi come i punti o lo stato di Premium. Le chiamate dell'app e del server sono verificate con App Check. Nessun sistema è completamente sicuro; se si verifica una violazione, effettueremo le comunicazioni richieste dalla legge.</p>

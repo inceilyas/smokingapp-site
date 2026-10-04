@@ -9,7 +9,7 @@ description: Explains what {{APP_NAME}} keeps on your device, what is sent to se
   <ul>
     <li>If you do not create an account, your counter, metrics and past attempts stay on your device (and in your iPhone's iCloud backup). They do not reach us.</li>
     <li>An account is only for the friends leaderboard and watcher features. If you create one, the data listed below is sent to our servers.</li>
-    <li>No ads, no tracking, no advertising identifier, no third-party analytics. We do not sell your data.</li>
+    <li>No ads, no tracking, no advertising identifier, and no third-party analytics or ad SDK in the app. If you have an account and make a purchase, your purchase records are sent from our servers to RevenueCat for revenue reporting only. We do not sell your data.</li>
     <li>You can delete your account yourself in the app (Profile &gt; Account &amp; Subscription).</li>
   </ul>
 </div>
@@ -48,13 +48,13 @@ description: Explains what {{APP_NAME}} keeps on your device, what is sent to se
 <p>This data is kept in a file in the app's storage. For iCloud backup, see <a href="#icloud">this section</a>.</p>
 
 <h2 id="server">3. Data sent if you create an account</h2>
-<p>Creating an account is optional and is done with email or Sign in with Apple. When you create an account and use the related features, the following data is sent to our servers (Google Firebase / Google Cloud):</p>
+<p>Creating an account is optional and is done with Sign in with Apple. When you create an account and use the related features, the following data is sent to our servers (Google Firebase / Google Cloud):</p>
 <div class="table-wrap">
 <table>
   <caption>Data stored on the server for a user with an account</caption>
   <thead><tr><th scope="col">Data</th><th scope="col">When</th><th scope="col">Purpose</th></tr></thead>
   <tbody>
-    <tr><td>Email address and sign-in credentials (with email sign-in the password is processed by Firebase Authentication and we never see it; with Apple sign-in, the identifier Apple provides, and your email may be Apple's private relay address)</td><td>When you create an account</td><td>Signing in, recognizing the account</td></tr>
+    <tr><td>Sign-in credentials (the identifier Apple provides with Sign in with Apple) and the email address Apple shares with us (it may be Apple's private relay address)</td><td>When you create an account</td><td>Signing in, recognizing the account</td></tr>
     <tr><td>Your name (entered by you; it is not taken from Apple)</td><td>When you save a name</td><td>Showing your name to friends and watchers, using it in notifications</td></tr>
     <tr><td>Share code (a random 12-character code)</td><td>When the account is created</td><td>Adding friends and watchers</td></tr>
     <tr><td>Account start time (server time)</td><td>When the account is created</td><td>Points calculation (points count from the moment the account is created)</td></tr>
@@ -69,6 +69,7 @@ description: Explains what {{APP_NAME}} keeps on your device, what is sent to se
   </tbody>
 </table>
 </div>
+<p>If you create an account and buy Premium, some of your purchase records are also sent from our servers to RevenueCat for subscription and revenue reporting; <a href="#processors">section 5</a> lists what is and is not sent.</p>
 <p>Some of this data indirectly shows your effort to quit smoking and may be considered health information. For that reason we process it only when you create an account and use the related feature, and only to provide that feature.</p>
 <p>As with every internet service, when your device connects to our servers your IP address and connection details are technically processed by Google and Apple infrastructure. Apple App Attest and Firebase App Check are used to verify that requests come from a genuine device and app; this is not used to examine your identity or usage habits.</p>
 
@@ -84,6 +85,7 @@ description: Explains what {{APP_NAME}} keeps on your device, what is sent to se
 <ul>
   <li><strong>Google Firebase / Google Cloud:</strong> authentication (Firebase Authentication), database (Cloud Firestore), server functions (Cloud Functions), notification delivery (Firebase Cloud Messaging) and app verification (App Check). Firestore data and functions run in Europe, in the <code>europe-west1</code> (Belgium) region.</li>
   <li><strong>Apple:</strong> purchases (App Store, StoreKit), Sign in with Apple, push notification service (APNs) and iCloud device backup. Apple processes your payment information; we never see your card or payment details. Apple tells us your subscription status and transaction identifier.</li>
+  <li><strong>RevenueCat, Inc. (USA):</strong> subscription and revenue reporting (sales dashboards and sale notifications for the developer). RevenueCat acts as our data processor under its data processing terms (DPA). The data is sent from our servers, not from the app; the app contains no RevenueCat SDK. RevenueCat does not decide whether you have access to Premium. Only if you have an account and make an in-app purchase (Premium), we send: your account identifier (the Firebase user ID, a random identifier); Apple-signed purchase transaction records (product, purchase and renewal dates, price and currency, store country, transaction identifiers, and the sandbox or production environment); and Apple's App Store server notifications about subscription events (renewal, cancellation, refund). We do not send your name, email address, health or smoking/quit data, counters, events, device identifiers or usage data to RevenueCat.</li>
 </ul>
 <p>These providers' own privacy policies also apply. We do not share your data with any other third party.</p>
 
@@ -100,7 +102,7 @@ description: Explains what {{APP_NAME}} keeps on your device, what is sent to se
 <ul>
   <li>The app has no ads.</li>
   <li>The advertising identifier (IDFA) is not used and the app does not track you across other apps and websites. For that reason we do not ask for tracking permission.</li>
-  <li>No third-party analytics or usage-measurement SDK is used.</li>
+  <li>No third-party analytics, usage-measurement or advertising SDK is used in the app. Purchase records are sent from our servers to RevenueCat only for revenue reporting (<a href="#processors">section 5</a>).</li>
   <li>We do not sell or rent your personal data.</li>
   <li>This website uses no cookies and loads no analytics or external trackers.</li>
 </ul>
@@ -112,7 +114,7 @@ description: Explains what {{APP_NAME}} keeps on your device, what is sent to se
 <ul>
   <li><strong>Data on your device</strong> stays until you delete it or remove the app.</li>
   <li><strong>Server data</strong> is kept while your account is open. When you delete your account it is deleted immediately and removed from any backups within 30 days at the latest.</li>
-  <li><strong>Deleting your account:</strong> In the app go to Profile &gt; Account &amp; Subscription &gt; Delete account. Your account, name, share code, points, slip and reset records, friendships, watcher relationships and watcher data, notification targets and subscription links are permanently deleted from the server; this cannot be undone. If you created your account with Sign in with Apple, the connection with Apple is revoked when you delete it. Your watchers and the people you watch are informed.</li>
+  <li><strong>Deleting your account:</strong> In the app go to Profile &gt; Account &amp; Subscription &gt; Delete account. Your account, name, share code, points, slip and reset records, friendships, watcher relationships and watcher data, notification targets and subscription links are permanently deleted from the server; this cannot be undone. If you created your account with Sign in with Apple, the connection with Apple is revoked when you delete it. Your watchers and the people you watch are informed. When you delete your account, we also ask RevenueCat to delete your customer record.</li>
   <li><strong>What is not deleted:</strong> (a) Report records are kept for 2 years to prevent abuse, then deleted. (b) Local tracking data on your device (counter, metrics, past attempts) is not removed by deleting your account; you can delete it in the app or by uninstalling the app. (c) Deleting your account does not cancel your Apple subscription; cancel it separately in App Store settings. (d) Copies in iCloud are in your own iCloud account and are subject to Apple's processes.</li>
   <li><strong>Technical logs:</strong> Server logs kept to operate the service (Google Cloud) are deleted automatically after 30 days.</li>
 </ul>
@@ -122,7 +124,7 @@ description: Explains what {{APP_NAME}} keeps on your device, what is sent to se
 <p>So that your tracking data is not lost when you move to a new phone, even without an account, the data file on your device is included in your iPhone's iCloud device backup automatically (if iCloud Backup is on). Apple keeps this backup in your iCloud account; we cannot access it. The app does not separately write your tracking data to iCloud.</p>
 
 <h2 id="transfers">11. International transfers</h2>
-<p>Firestore data and server functions run in Europe (<code>europe-west1</code>, Belgium). Some Google services such as authentication, notification delivery and app verification, and Apple services, run on global infrastructure, so your data may be processed in countries outside the European Economic Area and Türkiye. Such transfers are made with the appropriate safeguards offered by the providers (for example standard contractual clauses) and in line with applicable law. Google commits to processing the data under standard contractual clauses. When you create an account, you give explicit consent to your data being processed outside Türkiye (in Belgium and, where needed, other countries) in this way; you can withdraw your consent by deleting your account.</p>
+<p>Firestore data and server functions run in Europe (<code>europe-west1</code>, Belgium). Some Google services such as authentication, notification delivery and app verification, and Apple services, run on global infrastructure, so your data may be processed in countries outside the European Economic Area and Türkiye. Such transfers are made with the appropriate safeguards offered by the providers (for example standard contractual clauses) and in line with applicable law. Google commits to processing the data under standard contractual clauses. RevenueCat, Inc. processes the purchase data we send it for revenue reporting in the USA. When you create an account, you give explicit consent to your data being processed outside Türkiye (in the European Union, the USA and, where needed, other countries) in this way; you can withdraw your consent by deleting your account.</p>
 
 <h2 id="security">12. Security</h2>
 <p>Data is encrypted in transit. The server database is protected by access rules: a user can reach only their own data and the data of people who were allowed to see it, and the client cannot write fields such as points or Premium status. App and server calls are verified with App Check. No system is completely secure; if a breach occurs we will make the notifications required by law.</p>

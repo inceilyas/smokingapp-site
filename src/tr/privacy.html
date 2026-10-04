@@ -9,7 +9,7 @@ description: {{APP_NAME}} uygulamasının hangi verileri cihazda tuttuğunu, hes
   <ul>
     <li>Hesap açmazsan sayaç, metrikler ve geçmiş denemelerin yalnızca cihazında (ve iPhone'unun iCloud yedeğinde) kalır; bize ulaşmaz.</li>
     <li>Hesap yalnızca arkadaş sıralaması ve gözetmen özellikleri içindir. Hesap açarsan aşağıda sayılan veriler sunucuya gider.</li>
-    <li>Reklam yok, izleme yok, reklam kimliği yok, üçüncü taraf analitik yok. Verilerini satmayız.</li>
+    <li>Reklam yok, izleme yok, reklam kimliği yok; uygulamada üçüncü taraf analitik ya da reklam SDK'sı yok. Hesaplıysan ve satın alma yaptıysan, satın alma kayıtların yalnızca gelir raporlaması için sunucularımızdan RevenueCat'e gönderilir. Verilerini satmayız.</li>
     <li>Hesabını uygulamadan (Profil &gt; Hesap ve Abonelik) kendin silebilirsin.</li>
   </ul>
 </div>
@@ -48,17 +48,17 @@ description: {{APP_NAME}} uygulamasının hangi verileri cihazda tuttuğunu, hes
 <p>Bu veriler uygulamanın depolama alanında bir dosyada tutulur. iCloud yedeklemesi ile ilgili bilgi için <a href="#icloud">bu bölüme</a> bak.</p>
 
 <h2 id="sunucu">3. Hesap açarsan sunucuya giden veriler</h2>
-<p>Hesap açmak isteğe bağlıdır ve e-posta ya da Sign in with Apple ile yapılır. Hesap açtığında ve ilgili özellikleri kullandığında şu veriler sunucularımıza (Google Firebase / Google Cloud) gider:</p>
+<p>Hesap açmak isteğe bağlıdır ve Sign in with Apple ile yapılır. Hesap açtığında ve ilgili özellikleri kullandığında şu veriler sunucularımıza (Google Firebase / Google Cloud) gider:</p>
 <div class="table-wrap">
 <table>
   <caption>Hesaplı kullanıcı için sunucuda tutulan veriler</caption>
   <thead><tr><th scope="col">Veri</th><th scope="col">Ne zaman</th><th scope="col">Ne için</th></tr></thead>
   <tbody>
-    <tr><td>E-posta adresi ve kimlik doğrulama bilgisi (e-posta ile girişte parola Firebase Authentication tarafından işlenir; biz parolayı görmeyiz. Apple ile girişte Apple'ın verdiği kimlik bilgisi, e-posta adresin gizli aktarım adresi de olabilir)</td><td>Hesap açarken</td><td>Giriş yapmak, hesabı tanımak</td></tr>
+    <tr><td>Kimlik doğrulama bilgisi (Sign in with Apple ile Apple'ın verdiği kimlik bilgisi) ve Apple'ın bizimle paylaştığı e-posta adresi (Apple'ın gizli aktarım adresi de olabilir)</td><td>Hesap açarken</td><td>Giriş yapmak, hesabı tanımak</td></tr>
     <tr><td>Adın (sen girersin; Apple'dan alınmaz)</td><td>Adı kaydettiğinde</td><td>Arkadaşlara ve gözetmenlere ad göstermek, bildirimlerde kullanmak</td></tr>
     <tr><td>Paylaşım kodu (12 karakterlik rastgele kod)</td><td>Hesap açılınca</td><td>Arkadaş eklemek, gözetmen eklemek</td></tr>
     <tr><td>Hesap başlangıç zamanı (sunucu saatiyle)</td><td>Hesap açılınca</td><td>Puan hesabı (puan hesap açma anından itibaren sayılır)</td></tr>
-    <tr><td>Kayma ve sıfırlama olayları ("devam et" ve "sıfırla") ve sunucu zamanı</td><td>"Sigara içtim" akışında seçim yapınca</td><td>Puan ve seri hesabı, gözetmene bildirim</td></tr>
+    <tr><td>Sigara içtim kayıtları ("devam et" ve "sıfırla" seçimleri) ve sunucu zamanı</td><td>"Sigara içtim" akışında seçim yapınca</td><td>Puan ve seri hesabı, gözetmene bildirim</td></tr>
     <tr><td>Puan özeti (puan, seri ve hesaplamada kullanılan parametreler) ve süren denemenin başlangıcı</td><td>Hesapla birlikte</td><td>Arkadaş sıralaması</td></tr>
     <tr><td>Arkadaşlık, gözetmen, bekleyen istek ve engel kayıtları (ilgili kişilerin paylaşım kodu ile ad bilgisinin o anki görüntüsü dahil)</td><td>İstek gönderdiğinde, kabul ettiğinde ya da engellediğinde</td><td>Sosyal özellikleri sağlamak</td></tr>
     <tr><td>Gözetmen verisi: günlük sigara sayısı, paketteki sigara sayısı, bir sigara içme süresi, para birimi, fiyat kayıtları, süren denemenin başlangıcı ve geçmiş denemeler</td><td>Yalnızca aktif bir gözetmenin varken</td><td>Gözetmenin senin sayacını ve metriklerini görebilmesi</td></tr>
@@ -69,12 +69,13 @@ description: {{APP_NAME}} uygulamasının hangi verileri cihazda tuttuğunu, hes
   </tbody>
 </table>
 </div>
+<p>Hesap açıp Premium satın alırsan, abonelik ve gelir raporlaması için bazı satın alma kayıtların sunucularımızdan ayrıca RevenueCat'e gönderilir; nelerin gönderildiği ve nelerin gönderilmediği <a href="#saglayici">5. bölümde</a> yazar.</p>
 <p>Bu verilerin bir kısmı dolaylı olarak sigarayı bırakma çabanı gösterir ve sağlık bilgisi sayılabilir. Bu nedenle bu verileri yalnızca sen hesap açıp ilgili özelliği kullandığında ve yalnızca o özelliği sağlamak için işleriz.</p>
 <p>Uygulama sunucularına ulaşırken, bütün internet hizmetlerinde olduğu gibi, IP adresin ve cihazın bağlantı bilgileri Google ve Apple altyapısı tarafından teknik olarak işlenir. Cihazın ve uygulamanın gerçek olduğunu doğrulamak için Apple App Attest ve Firebase App Check kullanılır; bu doğrulama kimliğini ya da kullanım alışkanlıklarını incelemek için değildir.</p>
 
 <h2 id="paylasim">4. Verilerini kimler görür?</h2>
 <ul>
-  <li><strong>Arkadaşların:</strong> Karşılıklı kabul ettiğin arkadaşlar adını, puanını, serini ve sigarasız süreni sıralamada görür. Kayma ya da sıfırlama olaylarını görmezler.</li>
+  <li><strong>Arkadaşların:</strong> Karşılıklı kabul ettiğin arkadaşlar adını, puanını, serini ve sigarasız süreni sıralamada görür. Sigara içtim kayıtlarını ve sıfırlama olaylarını görmezler.</li>
   <li><strong>Gözetmenlerin:</strong> Bir kişiyi gözetmen olarak ancak sen isteği kabul edersen eklenir. Gözetmen adını, sayacını, metriklerini, geçmiş denemelerini, puanını ve serini görür; sayacı sıfırladığında ya da "devam et" dediğinde bildirim alır, ayrıca ilişki sürdüğü sürece periyodik, ayrıntı içermeyen olumlu özet bildirimleri alır. En fazla 3 gözetmenin ve bir gözetmen en fazla 3 kişiyi izleyebilir. Gözetmenin erişimi Premium'un sürdüğü süre ve bitişinden sonra 2 gün boyunca devam eder; Premium olmadığında bilgiler gözetmene görünmez. İstediğin zaman bir gözetmeni kaldırabilirsin.</li>
   <li><strong>Diğer kullanıcılar:</strong> Paylaşım kodunu bilen biri sana arkadaşlık ya da gözetmenlik isteği gönderebilir. İstek sana ulaştığında gönderenin adı görünür; sen kabul edene kadar sana ait veriler karşı tarafa açılmaz. İsteği reddedebilir, reddedip kişiyi engelleyebilir ve şikayet edebilirsin. Engellenen kişi, engellendiğini öğrenmez.</li>
   <li><strong>Biz:</strong> Geliştirici olarak, uygulamayı işletmek ve şikayetleri incelemek için gerekli olduğu ölçüde sunucudaki verilere erişebiliriz.</li>
@@ -84,6 +85,7 @@ description: {{APP_NAME}} uygulamasının hangi verileri cihazda tuttuğunu, hes
 <ul>
   <li><strong>Google Firebase / Google Cloud:</strong> Kimlik doğrulama (Firebase Authentication), veri tabanı (Cloud Firestore), sunucu fonksiyonları (Cloud Functions), bildirim gönderimi (Firebase Cloud Messaging) ve uygulama doğrulaması (App Check). Firestore verileri ve fonksiyonlar Avrupa'da, <code>europe-west1</code> (Belçika) bölgesinde çalışır.</li>
   <li><strong>Apple:</strong> Satın almalar (App Store, StoreKit), Sign in with Apple, anlık bildirim altyapısı (APNs) ve iCloud cihaz yedeği. Ödeme bilgilerini Apple işler; biz kredi kartı ya da ödeme bilgini görmeyiz. Apple bize abonelik durumunu ve işlem kimliğini bildirir.</li>
+  <li><strong>RevenueCat, Inc. (ABD):</strong> Abonelik ve gelir raporlaması (geliştirici için satış panelleri ve satış bildirimleri). RevenueCat, kendi veri işleme şartları (DPA) kapsamında veri işleyen olarak çalışır. Veri uygulamadan değil, sunucularımızdan gönderilir; uygulamada RevenueCat SDK'sı yoktur. Premium'a erişimine RevenueCat karar vermez. Yalnızca hesabın varsa ve uygulama içi satın alma (Premium) yaptıysan şunları göndeririz: hesap kimliğin (Firebase kullanıcı kimliği, rastgele bir tanımlayıcı); Apple'ın imzaladığı satın alma işlem kayıtları (ürün, satın alma ve yenileme tarihleri, fiyat ve para birimi, mağaza ülkesi, işlem kimlikleri, test ya da canlı ortam bilgisi); ve Apple'ın abonelik olaylarına (yenileme, iptal, iade) ilişkin App Store sunucu bildirimleri. Adını, e-posta adresini, sağlık ya da sigara bırakma verilerini, sayaçları, olayları, cihaz kimliklerini ve kullanım verilerini RevenueCat'e göndermeyiz.</li>
 </ul>
 <p>Bu sağlayıcıların kendi gizlilik politikaları da geçerlidir. Başka bir üçüncü tarafla verini paylaşmayız.</p>
 
@@ -100,7 +102,7 @@ description: {{APP_NAME}} uygulamasının hangi verileri cihazda tuttuğunu, hes
 <ul>
   <li>Uygulamada reklam yoktur.</li>
   <li>Reklam kimliği (IDFA) kullanılmaz; uygulama seni diğer uygulamalar ve sitelerde izlemez. Bu nedenle izleme izni istemeyiz.</li>
-  <li>Üçüncü taraf analitik ya da kullanım ölçümü SDK'sı kullanılmaz.</li>
+  <li>Uygulamada üçüncü taraf analitik, kullanım ölçümü ya da reklam SDK'sı kullanılmaz. Satın alma kayıtların yalnızca gelir raporlaması için sunucularımızdan RevenueCat'e gönderilir (<a href="#saglayici">5. bölüm</a>).</li>
   <li>Kişisel verilerini satmayız ve kiralamayız.</li>
   <li>Bu web sitesi çerez kullanmaz, analitik ya da harici izleyici yüklemez.</li>
 </ul>
@@ -112,7 +114,7 @@ description: {{APP_NAME}} uygulamasının hangi verileri cihazda tuttuğunu, hes
 <ul>
   <li><strong>Cihazındaki veriler</strong> sen silene kadar ya da uygulamayı kaldırana kadar cihazında kalır.</li>
   <li><strong>Sunucudaki veriler</strong> hesabın açık olduğu sürece saklanır. Hesabını sildiğinde hemen silinir; olası yedeklerden en geç 30 gün içinde temizlenir.</li>
-  <li><strong>Hesabı silme:</strong> Uygulamada Profil &gt; Hesap ve Abonelik &gt; Hesabı sil yolunu izleyebilirsin. Hesabın, adın, paylaşım kodun, puanın, kayma ve sıfırlama kayıtların, arkadaşlıkların, gözetmen ilişkilerin ve gözetmen verin, bildirim hedeflerin ve abonelik bağlamaların sunucudan kalıcı olarak silinir; bu geri alınamaz. Sign in with Apple ile açtığın hesabı sildiğinde Apple ile olan oturum bağlantısı da kaldırılır. Silme sırasında gözetmenlerin ve izlediğin kişiler bilgilendirilir.</li>
+  <li><strong>Hesabı silme:</strong> Uygulamada Profil &gt; Hesap ve Abonelik &gt; Hesabı sil yolunu izleyebilirsin. Hesabın, adın, paylaşım kodun, puanın, sigara içtim ve sıfırlama kayıtların, arkadaşlıkların, gözetmen ilişkilerin ve gözetmen verin, bildirim hedeflerin ve abonelik bağlamaların sunucudan kalıcı olarak silinir; bu geri alınamaz. Sign in with Apple ile açtığın hesabı sildiğinde Apple ile olan oturum bağlantısı da kaldırılır. Silme sırasında gözetmenlerin ve izlediğin kişiler bilgilendirilir. Hesabını sildiğinde RevenueCat'ten de müşteri kaydını silmesini isteriz.</li>
   <li><strong>Silinmeyenler:</strong> (a) Şikayet kayıtları, kötüye kullanımı önlemek için 2 yıl saklanır, sonra silinir. (b) Cihazındaki yerel takip verisi (sayaç, metrikler, geçmiş denemeler) hesabı silmekle silinmez; bunları uygulamadan ya da uygulamayı kaldırarak silebilirsin. (c) Hesabı silmek Apple'daki aboneliğini iptal etmez; aboneliği App Store ayarlarından ayrıca iptal etmelisin. (d) iCloud'daki yedek kopyalar kendi iCloud hesabındadır ve Apple'ın süreçlerine tabidir.</li>
   <li><strong>Teknik kayıtlar:</strong> Hizmetin işletilmesi için tutulan sunucu günlükleri (Google Cloud) 30 gün sonra kendiliğinden silinir.</li>
 </ul>
@@ -122,7 +124,7 @@ description: {{APP_NAME}} uygulamasının hangi verileri cihazda tuttuğunu, hes
 <p>Hesap açmasan da takip verilerin yeni bir telefona geçerken kaybolmasın diye, cihazındaki veri dosyası iPhone'unun iCloud cihaz yedeğine kendiliğinden girer (iCloud Yedekleme açıksa). Bu yedek Apple tarafından senin iCloud hesabında tutulur; biz erişemeyiz. Uygulama, takip verilerini ayrıca iCloud'a yazmaz.</p>
 
 <h2 id="aktarim">11. Yurt dışına aktarım</h2>
-<p>Firestore verileri ve sunucu fonksiyonları Avrupa'da (<code>europe-west1</code>, Belçika) çalışır. Kimlik doğrulama, bildirim gönderimi ve uygulama doğrulaması gibi bazı Google hizmetleri ile Apple hizmetleri küresel altyapıda çalıştığından verilerin Avrupa Ekonomik Alanı ve Türkiye dışındaki ülkelerde işlenmesi mümkündür. Bu aktarımlar, sağlayıcıların sunduğu uygun güvencelere (ör. standart sözleşme hükümleri) ve ilgili mevzuata uygun yapılır. Google, verileri standart sözleşme hükümleriyle işlemeyi taahhüt eder. Hesap açarken, verilerinin bu şekilde Türkiye dışında (Belçika ve gerektiğinde diğer ülkelerde) işlenmesine açık rıza verirsin; rızanı hesabını silerek geri alabilirsin.</p>
+<p>Firestore verileri ve sunucu fonksiyonları Avrupa'da (<code>europe-west1</code>, Belçika) çalışır. Kimlik doğrulama, bildirim gönderimi ve uygulama doğrulaması gibi bazı Google hizmetleri ile Apple hizmetleri küresel altyapıda çalıştığından verilerin Avrupa Ekonomik Alanı ve Türkiye dışındaki ülkelerde işlenmesi mümkündür. Bu aktarımlar, sağlayıcıların sunduğu uygun güvencelere (ör. standart sözleşme hükümleri) ve ilgili mevzuata uygun yapılır. Google, verileri standart sözleşme hükümleriyle işlemeyi taahhüt eder. RevenueCat, Inc., gelir raporlaması için ilettiğimiz satın alma verilerini ABD'de işler. Hesap açarken, verilerinin bu şekilde Türkiye dışında (Avrupa Birliği, ABD ve gerektiğinde diğer ülkelerde) işlenmesine açık rıza verirsin; rızanı hesabını silerek geri alabilirsin.</p>
 
 <h2 id="guvenlik">12. Güvenlik</h2>
 <p>Veriler iletilirken şifrelenir. Sunucu veri tabanı, erişim kurallarıyla korunur: bir kullanıcı yalnızca kendi verisine ve ona izin verilen kişilerin verisine erişebilir; puan ve Premium bilgisi gibi alanlara istemci yazamaz. Uygulama ve sunucu çağrıları App Check ile doğrulanır. Hiçbir sistem tamamen güvenli değildir; bir ihlal olursa mevzuatın gerektirdiği bildirimleri yaparız.</p>

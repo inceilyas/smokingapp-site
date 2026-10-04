@@ -53,7 +53,7 @@
   </header>
   <main id="main" class="wrap">
 <h1>Datenschutzerklärung</h1>
-<p class="meta">Gültig ab: 30. September 2026</p>
+<p class="meta">Gültig ab: 4. Oktober 2026</p>
 
 <div class="note legal-note" role="note"><p>Bei Abweichungen gilt die englische Fassung. <a href="../en/privacy.html" hreflang="en" lang="en">Englische Fassung</a></p></div>
 
@@ -62,7 +62,7 @@
   <ul>
     <li>Wenn du kein Konto erstellst, bleiben dein Zähler, deine Kennzahlen und deine früheren Versuche auf deinem Gerät (und in der iCloud-Sicherung deines iPhones). Sie gelangen nicht zu uns.</li>
     <li>Ein Konto dient nur der Freunde-Rangliste und der Begleiter-Funktion. Wenn du eines erstellst, werden die unten aufgeführten Daten an unsere Server gesendet.</li>
-    <li>Keine Werbung, kein Tracking, keine Werbe-ID, keine Analysedienste von Drittanbietern. Wir verkaufen deine Daten nicht.</li>
+    <li>Keine Werbung, kein Tracking, keine Werbe-ID und keine Analyse- oder Werbe-SDKs von Drittanbietern in der App. Wenn du ein Konto hast und einen Kauf tätigst, werden deine Kaufdaten von unseren Servern ausschließlich für die Umsatzberichterstattung an RevenueCat gesendet. Wir verkaufen deine Daten nicht.</li>
     <li>Du kannst dein Konto selbst in der App löschen (Profil &gt; Konto &amp; Abo).</li>
   </ul>
 </div>
@@ -101,13 +101,13 @@
 <p>Diese Daten werden in einer Datei im Speicher der App aufbewahrt. Zur iCloud-Sicherung siehe <a href="#icloud">diesen Abschnitt</a>.</p>
 
 <h2 id="server">3. Daten, die bei einem Konto gesendet werden</h2>
-<p>Die Erstellung eines Kontos ist optional und erfolgt per E-Mail oder mit Apple. Wenn du ein Konto erstellst und die zugehörigen Funktionen nutzt, werden die folgenden Daten an unsere Server gesendet (Google Firebase / Google Cloud):</p>
+<p>Die Erstellung eines Kontos ist optional und erfolgt mit Apple. Wenn du ein Konto erstellst und die zugehörigen Funktionen nutzt, werden die folgenden Daten an unsere Server gesendet (Google Firebase / Google Cloud):</p>
 <div class="table-wrap">
 <table>
   <caption>Auf dem Server gespeicherte Daten eines Nutzers mit Konto</caption>
   <thead><tr><th scope="col">Daten</th><th scope="col">Wann</th><th scope="col">Zweck</th></tr></thead>
   <tbody>
-    <tr><td>E-Mail-Adresse und Anmeldedaten (bei der Anmeldung per E-Mail wird das Passwort von Firebase Authentication verarbeitet und wir sehen es nie; bei der Anmeldung mit Apple die von Apple bereitgestellte Kennung, und deine E-Mail-Adresse kann die private Relay-Adresse von Apple sein)</td><td>Wenn du ein Konto erstellst</td><td>Anmeldung, Erkennung des Kontos</td></tr>
+    <tr><td>Anmeldedaten (bei der Anmeldung mit Apple die von Apple bereitgestellte Kennung) und die E-Mail-Adresse, die Apple an uns weitergibt (das kann die private Relay-Adresse von Apple sein)</td><td>Wenn du ein Konto erstellst</td><td>Anmeldung, Erkennung des Kontos</td></tr>
     <tr><td>Dein Name (von dir eingegeben; er wird nicht von Apple übernommen)</td><td>Wenn du einen Namen speicherst</td><td>Anzeige deines Namens für Freunde und Begleiter, Verwendung in Benachrichtigungen</td></tr>
     <tr><td>Share-Code (ein zufälliger Code mit 12 Zeichen)</td><td>Bei der Erstellung des Kontos</td><td>Hinzufügen von Freunden und Begleitern</td></tr>
     <tr><td>Startzeit des Kontos (Serverzeit)</td><td>Bei der Erstellung des Kontos</td><td>Punkteberechnung (Punkte zählen ab dem Moment der Kontoerstellung)</td></tr>
@@ -122,6 +122,7 @@
   </tbody>
 </table>
 </div>
+<p>Wenn du ein Konto erstellst und Premium kaufst, werden einige deiner Kaufdaten zusätzlich von unseren Servern für die Abo- und Umsatzberichterstattung an RevenueCat gesendet; <a href="#processors">Abschnitt 5</a> listet auf, was gesendet wird und was nicht.</p>
 <p>Einige dieser Daten zeigen indirekt dein Bemühen, mit dem Rauchen aufzuhören, und können als Gesundheitsdaten gelten. Deshalb verarbeiten wir sie nur, wenn du ein Konto erstellst und die zugehörige Funktion nutzt, und nur, um diese Funktion bereitzustellen.</p>
 <p>Wie bei jedem Internetdienst werden, wenn sich dein Gerät mit unseren Servern verbindet, deine IP-Adresse und Verbindungsdetails technisch von der Infrastruktur von Google und Apple verarbeitet. Apple App Attest und Firebase App Check werden verwendet, um zu prüfen, dass Anfragen von einem echten Gerät und einer echten App stammen; dies wird nicht dazu genutzt, deine Identität oder deine Nutzungsgewohnheiten zu untersuchen.</p>
 
@@ -137,6 +138,7 @@
 <ul>
   <li><strong>Google Firebase / Google Cloud:</strong> Authentifizierung (Firebase Authentication), Datenbank (Cloud Firestore), Serverfunktionen (Cloud Functions), Zustellung von Benachrichtigungen (Firebase Cloud Messaging) und App-Verifizierung (App Check). Firestore-Daten und Funktionen laufen in Europa, in der Region <code>europe-west1</code> (Belgien).</li>
   <li><strong>Apple:</strong> Käufe (App Store, StoreKit), Mit Apple anmelden, Push-Benachrichtigungsdienst (APNs) und iCloud-Gerätesicherung. Apple verarbeitet deine Zahlungsdaten; wir sehen deine Karten- oder Zahlungsdaten nie. Apple teilt uns deinen Abo-Status und die Transaktionskennung mit.</li>
+  <li><strong>RevenueCat, Inc. (USA):</strong> Abo- und Umsatzberichterstattung (Verkaufs-Dashboards und Verkaufsbenachrichtigungen für den Entwickler). RevenueCat handelt als unser Auftragsverarbeiter auf Grundlage seiner Datenverarbeitungsbedingungen (DPA). Die Daten werden von unseren Servern gesendet, nicht aus der App; die App enthält kein RevenueCat-SDK. RevenueCat entscheidet nicht darüber, ob du Zugriff auf Premium hast. Nur wenn du ein Konto hast und einen In-App-Kauf (Premium) tätigst, senden wir: deine Konto-Kennung (die Firebase-Nutzer-ID, eine zufällige Kennung); von Apple signierte Kauftransaktionsdaten (Produkt, Kauf- und Verlängerungsdaten, Preis und Währung, Store-Land, Transaktionskennungen sowie die Sandbox- oder Produktionsumgebung); und die App-Store-Servermitteilungen von Apple zu Abo-Ereignissen (Verlängerung, Kündigung, Erstattung). Deinen Namen, deine E-Mail-Adresse, Gesundheits- oder Rauchstoppdaten, Zähler, Ereignisse, Gerätekennungen und Nutzungsdaten senden wir nicht an RevenueCat.</li>
 </ul>
 <p>Zusätzlich gelten die eigenen Datenschutzerklärungen dieser Anbieter. Wir geben deine Daten an keine anderen Dritten weiter.</p>
 
@@ -153,7 +155,7 @@
 <ul>
   <li>Die App enthält keine Werbung.</li>
   <li>Die Werbe-ID (IDFA) wird nicht verwendet, und die App verfolgt dich nicht über andere Apps und Websites hinweg. Deshalb fragen wir nicht nach der Tracking-Berechtigung.</li>
-  <li>Es wird kein Analyse- oder Nutzungsmessungs-SDK von Drittanbietern eingesetzt.</li>
+  <li>In der App wird kein Analyse-, Nutzungsmessungs- oder Werbe-SDK von Drittanbietern eingesetzt. Kaufdaten werden von unseren Servern ausschließlich für die Umsatzberichterstattung an RevenueCat gesendet (<a href="#processors">Abschnitt 5</a>).</li>
   <li>Wir verkaufen oder vermieten deine personenbezogenen Daten nicht.</li>
   <li>Diese Website verwendet keine Cookies und lädt keine Analysedienste oder externen Tracker.</li>
 </ul>
@@ -165,7 +167,7 @@
 <ul>
   <li><strong>Daten auf deinem Gerät</strong> bleiben, bis du sie löschst oder die App entfernst.</li>
   <li><strong>Serverdaten</strong> werden aufbewahrt, solange dein Konto besteht. Wenn du dein Konto löschst, werden sie sofort gelöscht und spätestens innerhalb von 30 Tagen aus allen Sicherungen entfernt.</li>
-  <li><strong>Löschung deines Kontos:</strong> Gehe in der App zu Profil &gt; Konto &amp; Abo &gt; Konto löschen. Dein Konto, dein Name, dein Share-Code, deine Punkte, deine Ausrutscher- und Zurücksetzungs-Einträge, Freundschaften, Begleiter-Verbindungen und Begleiter-Daten, Benachrichtigungsziele und Abo-Verknüpfungen werden endgültig vom Server gelöscht; das lässt sich nicht rückgängig machen. Wenn du dein Konto mit Apple erstellt hast, wird die Verbindung mit Apple beim Löschen widerrufen. Deine Begleiter und die Personen, die du begleitest, werden informiert.</li>
+  <li><strong>Löschung deines Kontos:</strong> Gehe in der App zu Profil &gt; Konto &amp; Abo &gt; Konto löschen. Dein Konto, dein Name, dein Share-Code, deine Punkte, deine Ausrutscher- und Zurücksetzungs-Einträge, Freundschaften, Begleiter-Verbindungen und Begleiter-Daten, Benachrichtigungsziele und Abo-Verknüpfungen werden endgültig vom Server gelöscht; das lässt sich nicht rückgängig machen. Wenn du dein Konto mit Apple erstellt hast, wird die Verbindung mit Apple beim Löschen widerrufen. Deine Begleiter und die Personen, die du begleitest, werden informiert. Wenn du dein Konto löschst, bitten wir außerdem RevenueCat, deinen Kundendatensatz zu löschen.</li>
   <li><strong>Was nicht gelöscht wird:</strong> (a) Meldungs-Einträge werden zur Missbrauchsprävention 2 Jahre aufbewahrt und dann gelöscht. (b) Lokale Tracking-Daten auf deinem Gerät (Zähler, Kennzahlen, frühere Versuche) werden durch das Löschen deines Kontos nicht entfernt; du kannst sie in der App oder durch Deinstallieren der App löschen. (c) Das Löschen deines Kontos kündigt dein Apple-Abo nicht; kündige es separat in den App-Store-Einstellungen. (d) Kopien in iCloud liegen in deinem eigenen iCloud-Account und unterliegen den Verfahren von Apple.</li>
   <li><strong>Technische Protokolle:</strong> Server-Protokolle, die zum Betrieb des Dienstes geführt werden (Google Cloud), werden nach 30 Tagen automatisch gelöscht.</li>
 </ul>
@@ -175,7 +177,7 @@
 <p>Damit deine Tracking-Daten beim Wechsel auf ein neues Handy auch ohne Konto nicht verloren gehen, ist die Datendatei auf deinem Gerät automatisch in der iCloud-Gerätesicherung deines iPhones enthalten (wenn die iCloud-Sicherung eingeschaltet ist). Apple bewahrt diese Sicherung in deinem iCloud-Account auf; wir können nicht darauf zugreifen. Die App schreibt deine Tracking-Daten nicht separat in iCloud.</p>
 
 <h2 id="transfers">11. Internationale Übermittlungen</h2>
-<p>Firestore-Daten und Serverfunktionen laufen in Europa (<code>europe-west1</code>, Belgien). Einige Google-Dienste wie Authentifizierung, Zustellung von Benachrichtigungen und App-Verifizierung sowie Apple-Dienste laufen auf globaler Infrastruktur, sodass deine Daten in Ländern außerhalb des Europäischen Wirtschaftsraums und der Türkei verarbeitet werden können. Solche Übermittlungen erfolgen mit den geeigneten Garantien, die die Anbieter bieten (zum Beispiel Standardvertragsklauseln), und im Einklang mit dem geltenden Recht. Google verpflichtet sich, die Daten auf Grundlage von Standardvertragsklauseln zu verarbeiten. Wenn du ein Konto erstellst, erteilst du deine ausdrückliche Einwilligung, dass deine Daten auf diese Weise außerhalb der Türkei (in Belgien und, soweit nötig, in anderen Ländern) verarbeitet werden; du kannst deine Einwilligung durch das Löschen deines Kontos widerrufen.</p>
+<p>Firestore-Daten und Serverfunktionen laufen in Europa (<code>europe-west1</code>, Belgien). Einige Google-Dienste wie Authentifizierung, Zustellung von Benachrichtigungen und App-Verifizierung sowie Apple-Dienste laufen auf globaler Infrastruktur, sodass deine Daten in Ländern außerhalb des Europäischen Wirtschaftsraums und der Türkei verarbeitet werden können. Solche Übermittlungen erfolgen mit den geeigneten Garantien, die die Anbieter bieten (zum Beispiel Standardvertragsklauseln), und im Einklang mit dem geltenden Recht. Google verpflichtet sich, die Daten auf Grundlage von Standardvertragsklauseln zu verarbeiten. RevenueCat, Inc. verarbeitet die Kaufdaten, die wir für die Umsatzberichterstattung übermitteln, in den USA. Wenn du ein Konto erstellst, erteilst du deine ausdrückliche Einwilligung, dass deine Daten auf diese Weise außerhalb der Türkei (in der Europäischen Union, den USA und, soweit nötig, in anderen Ländern) verarbeitet werden; du kannst deine Einwilligung durch das Löschen deines Kontos widerrufen.</p>
 
 <h2 id="security">12. Sicherheit</h2>
 <p>Daten werden bei der Übertragung verschlüsselt. Die Server-Datenbank ist durch Zugriffsregeln geschützt: Ein Nutzer kann nur auf seine eigenen Daten und die Daten von Personen zugreifen, die sie sehen durften, und der Client kann Felder wie Punkte oder den Premium-Status nicht schreiben. Aufrufe von App und Server werden mit App Check verifiziert. Kein System ist vollkommen sicher; sollte es zu einer Verletzung kommen, machen wir die gesetzlich vorgeschriebenen Meldungen.</p>
@@ -197,7 +199,7 @@
 <p>Sende deine Anfrage an <a href="mailto:miselylab@gmail.com">miselylab@gmail.com</a>. Zur Überprüfung deiner Identität können wir dich bitten, von der E-Mail-Adresse deines Kontos zu schreiben oder deinen Share-Code anzugeben. Wir beantworten Anfragen spätestens innerhalb von 30 Tagen.</p>
 
 <h2 id="changes">15. Änderungen</h2>
-<p>Wir können diese Erklärung aktualisieren, wenn sich die App oder das Recht ändert. Wichtige Änderungen geben wir in der App oder auf dieser Seite bekannt; das Datum des Inkrafttretens der aktuellen Fassung steht oben auf der Seite. Diese Fassung ist am 30. September 2026 in Kraft getreten.</p>
+<p>Wir können diese Erklärung aktualisieren, wenn sich die App oder das Recht ändert. Wichtige Änderungen geben wir in der App oder auf dieser Seite bekannt; das Datum des Inkrafttretens der aktuellen Fassung steht oben auf der Seite. Diese Fassung ist am 4. Oktober 2026 in Kraft getreten.</p>
   </main>
   <footer class="site-footer">
     <div class="wrap">
